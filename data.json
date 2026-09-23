@@ -92,8 +92,14 @@
       "category": "IA & SaaS",
       "description": "Plateforme SaaS multi-agents IA pour TPE/PME : orchestration d'agents IA pour automatiser les tâches métiers. Développée avec FastAPI et Next.js.",
       "tags": ["FastAPI", "Next.js", "Agents IA", "SaaS"],
-      "link": "",
-      "demo": ""
+      "link": "https://github.com/FlorianG66/AgentHub",
+      "demo": "",
+      "detail": [
+        "AgentHub est une plateforme SaaS permettant aux TPE/PME de créer et orchestrer plusieurs agents IA : qualification de prospects, support client, relance, synthèse de documents… Chaque agent est configurable et une file d'orchestration coordonne leur exécution selon des scénarios métiers.",
+        "Mon rôle : conception de l'architecture multi-agents, implémentation de l'orchestration et des workflows, et déploiement de la plateforme. Le code est développé en approche vibe coding — j'assure la conception, l'architecture et la revue, et je m'appuie sur un agent de code pour accélérer l'écriture.",
+        "Réseau : FastAPI (Python) en back, Next.js en front. À venir : mise en open source.",
+        "Le repo est privé pour l'instant — n'hésitez pas à me demander une démo ou une présentation."
+      ]
     },
     {
       "title": "Radar — Veille concurrentielle des prix",
@@ -101,7 +107,12 @@
       "description": "Outil de surveillance des prix, de la disponibilité et des promotions chez les concurrents, pour aider les entreprises à piloter leur positionnement.",
       "tags": ["Python", "Scraping", "Veille"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Radar collecte automatiquement les prix, la disponibilité et les promotions des produits chez les concurrents, puis les restitue dans des rapports de synthèse pour aider les entreprises à piloter leur positionnement.",
+        "Le projet couvre la collecte (scraping et APIs), le nettoyage et la normalisation des données, ainsi que la détection d'événements commerciaux (baisses, ruptures, promotions) pour alerter sur les mouvements du marché.",
+        "Réalisé en Python avec une approche de développement assistée par IA (vibe coding) : je pilote la conception, l'architecture et la revue de code. Repo privé — accessible sur demande."
+      ]
     },
     {
       "title": "Automatisation de workflows métiers",
@@ -109,7 +120,12 @@
       "description": "Intégration d'outils no-code (n8n, Make, Zapier) et d'agents IA pour automatiser les processus clés d'entreprises et réduire le temps consacré aux tâches répétitives.",
       "tags": ["n8n", "OpenAI", "API REST", "Agents IA"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Objectif : réduire le temps consacré aux tâches répétitives et fiabiliser les processus clés d'une organisation.",
+        "Mon rôle : analyse des processus, conception du scénario d'automatisation, mise en place des outils no-code et agents IA, puis formation des équipes à la prise en main.",
+        "Résultat : un gain de temps mesurable sur les tâches métiers, des process documentés et reproductibles, et une montée en compétence des équipes."
+      ]
     },
     {
       "title": "Ateliers IA générative pour TPE/PME",
@@ -117,7 +133,12 @@
       "description": "Conception de supports pédagogiques et animation d'ateliers pratiques sur l'IA générative pour former des publics non techniques à ses cas d'usage métiers.",
       "tags": ["IA générative", "GPT", "Pédagogie"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Objectif : faire découvrir l'IA générative à des publics non techniques, avec des cas d'usage concrets issus de leur métier.",
+        "Animation : démonstrations d'outils (GPT, Claude, Gemini), exercices pratiques guidés, échanges autour des apports et limites de l'IA, notamment sur les aspects éthiques et RGPD.",
+        "Format : petits groupes, supports adaptés, focus sur les applications immédiates pour l'entreprise."
+      ]
     },
     {
       "title": "Fiabilisation d'un système d'information interne",
@@ -125,7 +146,12 @@
       "description": "Développement et maintenance de solutions bureautiques et web (Python, SQL, Bash) pour fiabiliser et rendre plus efficace le système d'information d'une organisation.",
       "tags": ["Python", "SQL", "Bash"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Objectif : rendre le système d'information interne plus fiable et plus efficace au quotidien.",
+        "Mon rôle : développement d'outils et de scripts (Python, SQL, Bash), automatisation de tâches bureautiques et web, correction de données, et documentation des procédures.",
+        "Impact : moins d'erreurs, moins de temps perdu, des données fiables et des équipes outillées."
+      ]
     },
     {
       "title": "Optimisation d'une plateforme e-commerce",
@@ -133,7 +159,12 @@
       "description": "Développement de fonctionnalités web et analyse des données utilisateurs pour améliorer les performances de conversion d'une plateforme e-commerce.",
       "tags": ["Développement web", "Analytics"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Objectif : améliorer les performances de conversion d'une plateforme e-commerce.",
+        "Travail : développement de nouvelles fonctionnalités web et analyse des données utilisateurs (parcours, taux de conversion, points de friction) pour identifier les axes d'optimisation.",
+        "Méthode : itérations guidées par les données, avec mesure de l'impact de chaque changement."
+      ]
     },
     {
       "title": "Formation IA — Niveau 1 : les bases de l'IA",
@@ -141,7 +172,12 @@
       "description": "Initiation aux fondamentaux de l'IA : fonctionnement des modèles, cas d'usage métiers, limites éthiques et démo d'outils d'IA générative.",
       "tags": ["IA", "GPT", "Pédagogie"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Objectif : transmettre les fondamentaux de l'IA (fonctionnement des modèles, cas d'usage métiers, limites éthiques) sans prérequis technique.",
+        "Déroulé : présentation des concepts clés, démonstrations en direct de l'IA générative, temps d'échanges et exercices d'application sur des cas concrets.",
+        "Public : professionnels non techniques (dirigeants, managers, équipes métiers)."
+      ]
     },
     {
       "title": "Formation IA — Niveau 2 : automatisation de processus",
@@ -149,7 +185,12 @@
       "description": "Atelier avancé sur l'automatisation des processus métiers avec des outils no-code et des agents IA (n8n, Make, Zapier, API OpenAI).",
       "tags": ["Automatisation", "n8n", "Agents IA"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Objectif : passer à l'échelle avec l'automatisation de processus métiers à l'aide d'outils no-code et d'agents IA.",
+        "Au programme : prise en main de n8n, Make et Zapier, création d'agents IA via API (OpenAI, REST), mise en place de scénarios d'orchestration complets.",
+        "Méthode : atelier pratique où chaque participant construit ses propres automatisations."
+      ]
     },
     {
       "title": "Accompagnement cybersécurité & RGPD",
@@ -157,7 +198,12 @@
       "description": "Diagnostic de la posture cybersécurité et mise en conformité RGPD de TPE/PME : analyse des risques, préconisations et sécurisation des pratiques.",
       "tags": ["Cybersécurité", "RGPD", "Conseil"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Objectif : sécuriser et mettre en conformité les systèmes d'information des TPE/PME face aux risques cyber et au RGPD.",
+        "Démarche : diagnostic de la posture cybersécurité, analyse des risques, préconisations concrètes (mots de passe, sauvegardes, mises à jour, double authentification), et sensibilisation des équipes.",
+        "Résultat : une feuille de route actionnable, hiérarchisée par priorité de risque, et un accompagnement RGPD (registre des traitements, mentions légales, consentement)."
+      ]
     },
     {
       "title": "Masterclass & conférences IA",
@@ -165,7 +211,12 @@
       "description": "Animation de masterclass et de conférences en présentiel sur l'IA pour présenter ses enjeux et ses usages concrets aux professionnels.",
       "tags": ["IA générative", "Conférence", "Présentiel"],
       "link": "",
-      "demo": ""
+      "demo": "",
+      "detail": [
+        "Objectif : présenter l'IA (enjeux, usages, limites) à des publics professionnels lors de masterclass et de conférences.",
+        "Animation : temps forts en présentiel avec démonstrations en direct, études de cas réels et échanges avec le public.",
+        "Thématiques : l'IA au service des métiers, l'IA générative pour les TPE/PME, l'humain et l'IA demain."
+      ]
     }
   ],
   "education": [
@@ -192,16 +243,46 @@
     }
   ],
   "interests": [
-    "Judo (ceinture noire)",
-    "Basketball",
-    "Musculation",
-    "Culture japonaise",
-    "Voyages en Asie"
+    {
+      "name": "Judo (ceinture noire)",
+      "detail": "Le judo m'a appris la discipline, la rigueur et la gestion de la pression, des qualités que je transpose dans les projets techniques : rester calme face à un problème, progresser par itérations et respecter les autres."
+    },
+    {
+      "name": "Basketball",
+      "detail": "Un sport d'équipe qui m'a appris à communiquer, à me positionner et surtout à faire confiance aux autres : l'équipe avant les individualités."
+    },
+    {
+      "name": "Musculation",
+      "detail": "Un entraînement régulier pour la persévérance et la régularité : les résultats passent par la répétition et la constance, un principe que j'applique aussi dans l'apprentissage technique."
+    },
+    {
+      "name": "Culture japonaise",
+      "detail": "Une fascination pour la précision, l'artisanat et l'esthétique japonaise, qui m'a aussi donné envie d'apprendre la langue (niveau JLPT5) et de découvrir le pays."
+    },
+    {
+      "name": "Voyages en Asie",
+      "detail": "Découvrir d'autres cultures, s'adapter à l'imprévu et observer comment les technologies s'intègrent différemment selon les pays et les usages."
+    }
   ],
   "trainings": [
-    { "name": "Core Python Programming", "org": "École 42 Perpignan", "year": "2026" },
-    { "name": "Prise de parole en public", "org": "Mon entreprise est une scène", "year": "2025" },
-    { "name": "Éco-conception de service numérique", "org": "GreenIT", "year": "2023" }
+    {
+      "name": "Core Python Programming",
+      "org": "École 42 Perpignan",
+      "year": "2026",
+      "detail": "Formation intensive sur les fondamentaux de Python : syntaxe, structures de données, programmation orientée objet, bonnes pratiques et projets pratiques."
+    },
+    {
+      "name": "Prise de parole en public",
+      "org": "Mon entreprise est une scène",
+      "year": "2025",
+      "detail": "Techniques d'expression orale, storytelling, gestion du stress et posture d'animateur, directement appliquées à l'animation d'ateliers et de conférences."
+    },
+    {
+      "name": "Éco-conception de service numérique",
+      "org": "GreenIT",
+      "year": "2023",
+      "detail": "Bonnes pratiques de la méthode GreenIT pour concevoir des services numériques sobres et durables : impacts environnementaux, mesure et optimisations."
+    }
   ],
   "testimonials": [],
   "footer": "© 2026 Florian Guichard — CV développé avec HTML, CSS & JavaScript"

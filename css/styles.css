@@ -318,6 +318,42 @@ a { color: inherit; text-decoration: none; }
 .project-links a:hover { text-decoration: underline; }
 .project-links a:nth-child(2) { color: var(--accent-1); }
 
+.project-detail {
+  margin: -6px 0 14px; border-top: 1px dashed var(--border); padding-top: 12px;
+}
+.project-detail summary {
+  cursor: pointer; list-style: none; user-select: none;
+  font-family: var(--font-head); font-size: 0.8rem; font-weight: 600;
+  color: var(--accent-1); margin-bottom: 10px;
+}
+.project-detail summary::-webkit-details-marker { display: none; }
+.project-detail summary::before { content: '＋ '; }
+.project-detail[open] summary::before { content: '－ '; }
+.project-detail p { color: var(--muted); font-size: 0.86rem; line-height: 1.55; margin: 0 0 10px; }
+
+/* ---------- Détails (formations & intérêts) ---------- */
+.chip-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 12px 18px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.chip-card:hover { transform: translateY(-3px); border-color: var(--accent-2); }
+.chip-card summary {
+  position: relative;
+  cursor: pointer; list-style: none; user-select: none;
+  font-family: var(--font-head); font-size: 0.85rem; font-weight: 600;
+  display: flex; flex-direction: column; gap: 2px; padding-right: 18px;
+}
+.chip-card summary::-webkit-details-marker { display: none; }
+.chip-card summary::after {
+  content: '▾'; color: var(--accent-1); font-size: 0.7rem;
+  position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+}
+.chip-card[open] summary::after { content: '▴'; }
+.chip-card { position: relative; }
+.chip-card summary small { font-family: var(--font-body); font-weight: 400; color: var(--muted); font-size: 0.72rem; }
+.chip-detail { color: var(--muted); font-size: 0.8rem; line-height: 1.55; margin-top: 10px; }
+
 /* ---------- Contact ---------- */
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 

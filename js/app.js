@@ -180,15 +180,24 @@ function renderLanguages(d) {
 function renderTrainings(d) {
   qs("#trainingList").innerHTML = (d.trainings || [])
     .map((t) =>
-      '<span class="chip">' + escapeHtml(t.name) +
-      "<small>" + escapeHtml(t.org) + (t.year ? " · " + escapeHtml(t.year) : "") + "</small></span>"
+      '<details class="chip-card">' +
+      "<summary>" + escapeHtml(t.name) +
+      "<small>" + escapeHtml(t.org) + (t.year ? " · " + escapeHtml(t.year) : "") + "</small></summary>" +
+      (t.detail ? '<div class="chip-detail">' + escapeHtml(t.detail) + "</div>" : "") +
+      "</details>"
     )
     .join("");
 }
 
 function renderInterests(d) {
   qs("#interestsList").innerHTML = (d.interests || [])
-    .map((i) => '<span class="chip">' + escapeHtml(i) + "</span>")
+    .map((i) => {
+      if (typeof i === "string") return '<span class="chip">' + escapeHtml(i) + "</span>";
+      return (
+        '<details class="chip-card"><summary>' + escapeHtml(i.name) + "</summary>" +
+        '<div class="chip-detail">' + escapeHtml(i.detail || "") + "</div></details>"
+      );
+    })
     .join("");
 }
 
@@ -211,6 +220,10 @@ function renderProjects(d) {
         '<p class="project-desc">' + escapeHtml(p.description) + "</p>" +
         '<div class="project-tags">' + (p.tags || []).map((t) =>
           '<span class="tag">' + escapeHtml(t) + "</span>").join("") + "</div>" +
+        (p.detail && p.detail.length
+          ? '<details class="project-detail"><summary>' + (p.link || p.demo ? "En savoir plus" : "Détails du projet") + "</summary>" +
+            p.detail.map((d) => "<p>" + escapeHtml(d) + "</p>").join("") + "</details>"
+          : "") +
         '<div class="project-links">' +
         (p.link ? '<a href="' + p.link + '" target="_blank" rel="noopener">Voir le code ↗</a>' : "") +
         (p.demo ? '<a href="' + p.demo + '" target="_blank" rel="noopener">Démo ↗</a>' : "") +
@@ -351,7 +364,7 @@ function renderPrint(d) {
     .join("");
 
   const interests = (d.interests || [])
-    .map((i) => '<span class="pint">' + escapeHtml(i) + "</span>")
+    .map((i) => '<span class="pint">' + escapeHtml(typeof i === "string" ? i : i.name) + "</span>")
     .join("");
 
   const education = (d.education || [])
