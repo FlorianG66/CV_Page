@@ -88,6 +88,22 @@
   ],
   "projects": [
     {
+      "title": "AgentHub — Plateforme SaaS multi-agents IA",
+      "category": "IA & SaaS",
+      "description": "Plateforme SaaS multi-agents IA pour TPE/PME : orchestration d'agents IA pour automatiser les tâches métiers. Développée avec FastAPI et Next.js.",
+      "tags": ["FastAPI", "Next.js", "Agents IA", "SaaS"],
+      "link": "",
+      "demo": ""
+    },
+    {
+      "title": "Radar — Veille concurrentielle des prix",
+      "category": "Data",
+      "description": "Outil de surveillance des prix, de la disponibilité et des promotions chez les concurrents, pour aider les entreprises à piloter leur positionnement.",
+      "tags": ["Python", "Scraping", "Veille"],
+      "link": "",
+      "demo": ""
+    },
+    {
       "title": "Automatisation de workflows métiers",
       "category": "IA & No-code",
       "description": "Intégration d'outils no-code (n8n, Make, Zapier) et d'agents IA pour automatiser les processus clés d'entreprises et réduire le temps consacré aux tâches répétitives.",
@@ -181,6 +197,11 @@
     "Musculation",
     "Culture japonaise",
     "Voyages en Asie"
+  ],
+  "trainings": [
+    { "name": "Core Python Programming", "org": "École 42 Perpignan", "year": "2026" },
+    { "name": "Prise de parole en public", "org": "Mon entreprise est une scène", "year": "2025" },
+    { "name": "Éco-conception de service numérique", "org": "GreenIT", "year": "2023" }
   ],
   "testimonials": [],
   "footer": "© 2026 Florian Guichard — CV développé avec HTML, CSS & JavaScript"

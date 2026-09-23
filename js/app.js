@@ -177,6 +177,15 @@ function renderLanguages(d) {
     .join("");
 }
 
+function renderTrainings(d) {
+  qs("#trainingList").innerHTML = (d.trainings || [])
+    .map((t) =>
+      '<span class="chip">' + escapeHtml(t.name) +
+      "<small>" + escapeHtml(t.org) + (t.year ? " · " + escapeHtml(t.year) : "") + "</small></span>"
+    )
+    .join("");
+}
+
 function renderInterests(d) {
   qs("#interestsList").innerHTML = (d.interests || [])
     .map((i) => '<span class="chip">' + escapeHtml(i) + "</span>")
@@ -564,6 +573,7 @@ async function loadData() {
   renderExperience(data);
   renderSkills(data);
   renderLanguages(data);
+  renderTrainings(data);
   renderInterests(data);
   renderProjects(data);
   renderEducation(data);
