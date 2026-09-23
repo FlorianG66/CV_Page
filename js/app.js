@@ -257,6 +257,120 @@ function renderFooter(d) {
   setText("footerText", d.footer);
 }
 
+/* ---------- Aperçu imprimable (PDF 1 page) ---------- */
+
+function renderPrint(d) {
+  const p = d.profile;
+  const c = d.contact;
+
+  const contactItems = [
+    p.location && { tag: "📍", text: p.location },
+    c.email && { tag: "✉", text: c.email },
+    c.phone && { tag: "☏", text: c.phone },
+    c.linkedin && { tag: "in", text: cleanDomain(c.linkedin) },
+    c.github && { tag: "gh", text: cleanDomain(c.github) },
+    c.website && { tag: "🌐", text: cleanDomain(c.website) }
+  ].filter(Boolean);
+
+  const experience = (d.experience || [])
+    .map(
+      (e) =>
+        '<article class="pe"><div class="pe-head"><div>' +
+        '<div class="pe-role">' + escapeHtml(e.role) + "</div>" +
+        '<div class="pe-company">' + escapeHtml(e.company) +
+        (e.location ? " · " + escapeHtml(e.location) : "") + "</div></div>" +
+        '<span class="pe-period">' + escapeHtml(e.period) + "</span></div>" +
+        (e.description ? "<p>" + escapeHtml(e.description) + "</p>" : "") +
+        "</article>"
+    )
+    .join("");
+
+  const skills = (d.skills || [])
+    .map(
+      (cat) =>
+        '<div class="pcat"><div class="pcat-title">' + escapeHtml(cat.category) + "</div>" +
+        cat.items
+          .map(
+            (s) =>
+              '<div class="ps"><div class="ps-head"><span>' + escapeHtml(s.name) + "</span></div>" +
+              '<div class="ps-bar"><span style="width:' + Math.min(100, Number(s.level) || 0) + '%"></span></div></div>'
+          )
+          .join("") +
+        "</div>"
+    )
+    .join("");
+
+  const languages = (d.languages || [])
+    .map((l) => "<li><strong>" + escapeHtml(l.name) + "</strong> — " + escapeHtml(l.level) + "</li>")
+    .join("");
+
+  const interests = (d.interests || [])
+    .map((i) => '<span class="pint">' + escapeHtml(i) + "</span>")
+    .join("");
+
+  const education = (d.education || [])
+    .map(
+      (e) =>
+        '<div class="ped"><div class="ped-head">' +
+        '<div class="ped-degree">' + escapeHtml(e.degree) + "</div>" +
+        '<span class="ped-period">' + escapeHtml(e.period) + "</span></div>" +
+        '<div class="ped-school">' + escapeHtml(e.school) +
+        (e.place ? " · " + escapeHtml(e.place) : "") + "</div></div>"
+    )
+    .join("");
+
+  const projects = (d.projects || [])
+    .map(
+      (pr) =>
+        '<span class="pproj"><span class="pproj-title">' + escapeHtml(pr.title) +
+        '</span><small>' + escapeHtml(pr.category) + "</small></span>"
+    )
+    .join("");
+
+  qs("#printArea").innerHTML =
+    '<section class="pheader">' +
+    '<div class="pheader-main">' +
+    "<h1>" + escapeHtml(p.name) + "</h1>" +
+    '<div class="ptitle">' + escapeHtml((p.roles || []).slice(0, 3).join("  |  ")) + "</div>" +
+    (p.tagline ? '<p class="ptagline">' + escapeHtml(p.tagline) + "</p>" : "") +
+    "</div>" +
+    (p.availability
+      ? '<div class="pavailable"><span class="pdot"></span>' + escapeHtml(p.availability) + "</div>"
+      : "") +
+    "</section>" +
+
+    '<div class="pbody">' +
+    '<aside class="paside">' +
+
+    (p.bio
+      ? '<section class="pbox"><h2>Profil</h2><p class="pprofil">' + escapeHtml(p.bio) + "</p></section>"
+      : "") +
+
+    '<section class="pbox"><h2>Contact</h2><ul class="pcontact">' +
+    contactItems.map((i) => "<li><em>" + i.tag + "</em> " + escapeHtml(i.text) + "</li>").join("") +
+    "</ul></section>" +
+
+    '<section class="pbox"><h2>Compétences</h2>' + skills + "</section>" +
+
+    (languages ? '<section class="pbox"><h2>Langues</h2><ul class="plangs">' + languages + "</ul></section>" : "") +
+
+    (interests ? '<section class="pbox"><h2>Centres d\'intérêt</h2><div class="pinterests">' + interests + "</div></section>" : "") +
+
+    "</aside>" +
+
+    '<section class="pmain">' +
+
+    (experience ? '<section class="pbox"><h2>Expérience professionnelle</h2>' + experience + "</section>" : "") +
+
+    (education ? '<section class="pbox"><h2>Formation</h2>' + education + "</section>" : "") +
+
+    (projects ? '<section class="pbox"><h2>Projets</h2><div class="pprojects">' + projects + "</div></section>" : "") +
+
+    "</section></div>" +
+
+    '<div class="pfoot">' + escapeHtml(d.footer) + "</div>";
+}
+
 /* ---------- Interactions ---------- */
 
 function setupReveal() {
@@ -379,6 +493,7 @@ async function loadData() {
   renderEducation(data);
   renderContact(data);
   renderFooter(data);
+  renderPrint(data);
 
   setupRoleRotator(data.profile.roles);
   setupTheme();
