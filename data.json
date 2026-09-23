@@ -144,10 +144,10 @@
       "demo": ""
     },
     {
-      "title": "Conférences IA en ligne",
+      "title": "Masterclass & conférences IA",
       "category": "Formation",
-      "description": "Animation de conférences et masterclass en ligne sur l'IA pour présenter ses enjeux et ses usages concrets aux professionnels.",
-      "tags": ["IA générative", "Conférence"],
+      "description": "Animation de masterclass et de conférences en présentiel sur l'IA pour présenter ses enjeux et ses usages concrets aux professionnels.",
+      "tags": ["IA générative", "Conférence", "Présentiel"],
       "link": "",
       "demo": ""
     }
