@@ -1,135 +1,154 @@
 {
   "profile": {
-    "name": "Prénom NOM",
-    "initials": "PV",
-    "roles": ["Développeur Full-Stack", "Développeur Web", "Ingénieur Logiciel"],
-    "tagline": "Je conçois des applications web modernes, rapides et faciles à utiliser.",
-    "bio": "Passionné par le développement web depuis plusieurs années, je transforme des idées en produits concrets. J'aime le travail en équipe, l'apprentissage continu et les défis techniques. Placeholder : remplace ce texte par ton introduction personnelle.",
-    "photo": "",
-    "location": "Ville, Pays",
-    "availability": "Disponible",
+    "name": "Florian Guichard",
+    "initials": "FG",
+    "roles": ["Consultant IA & Data", "Cybersécurité", "Transition Numérique"],
+    "tagline": "J'accompagne les organisations dans leurs projets IA, data et cybersécurité, de l'analyse du besoin jusqu'au déploiement.",
+    "bio": "Ingénieur Bac+5 (IMERIR, option cybersécurité), spécialisé en projets Data et IA appliquée. Depuis 4 ans, j'accompagne des organisations dans l'intégration de l'IA générative, l'automatisation de processus métiers et le renforcement de leur posture cybersécurité, de l'analyse du besoin jusqu'au déploiement. À l'aise avec des interlocuteurs techniques et métiers.",
+    "photo": "img/photo.jpg",
+    "location": "Perpignan (66)",
+    "availability": "Ouvert aux opportunités",
     "availabilityIcon": "✓",
     "stats": [
-      { "value": "5+", "label": "Années d'expérience" },
-      { "value": "30+", "label": "Projets réalisés" },
-      { "value": "10+", "label": "Clients satisfaits" }
+      { "value": "4+", "label": "Années d'expérience" },
+      { "value": "60+", "label": "TPE/PME accompagnées" },
+      { "value": "800", "label": "Score TOEIC (anglais)" }
     ]
   },
   "contact": {
-    "email": "prenom.nom@email.com",
-    "phone": "+33 6 00 00 00 00",
-    "github": "https://github.com/ton-compte",
-    "linkedin": "https://www.linkedin.com/in/ton-profil",
-    "website": "https://tonsite.com",
+    "email": "florian.guichard66@gmail.com",
+    "phone": "06 11 65 65 73",
+    "github": "",
+    "linkedin": "",
+    "website": "",
     "cvPdf": ""
   },
   "experience": [
     {
-      "period": "2023 — Présent",
-      "role": "Développeur Full-Stack",
-      "company": "Nom de l'entreprise",
-      "location": "Ville",
-      "description": "Placeholder : décris tes missions principales, tes réalisations et l'impact de ton travail.",
-      "tags": ["React", "Node.js", "PostgreSQL", "Docker"]
+      "period": "2022 — Aujourd'hui",
+      "role": "Conseiller numérique",
+      "company": "CCI Pyrénées-Orientales",
+      "location": "Perpignan",
+      "description": "Accompagnement individuel de plus de 60 TPE/PME dans leur transformation numérique et cybersécurité, permettant d'accroître leur maturité digitale et l'adoption de solutions sécurisées. Conception de supports pédagogiques et animation d'ateliers pratiques sur l'IA générative pour des publics non techniques. Intégration d'outils no-code (n8n, Make, Zapier) et d'agents IA via API OpenAI/REST pour automatiser les workflows clés.",
+      "tags": ["IA générative", "n8n / Make / Zapier", "API REST", "Cybersécurité", "Pédagogie"]
     },
     {
-      "period": "2021 — 2023",
-      "role": "Développeur Front-End",
-      "company": "Nom de l'entreprise",
-      "location": "Ville",
-      "description": "Placeholder : décris tes missions principales, tes réalisations et l'impact de ton travail.",
-      "tags": ["JavaScript", "Vue.js", "SCSS", "REST API"]
+      "period": "Sept. 2019 — Oct. 2021",
+      "role": "Apprenti Ingénieur Informatique",
+      "company": "CCI Pyrénées-Orientales",
+      "location": "Perpignan",
+      "description": "Développement et maintenance de solutions bureautiques et web (Python, SQL, Bash), garantissant la fiabilisation du système d'information interne. Création de contenus vidéo et de guides pédagogiques pour renforcer la communication digitale et faciliter la prise en main des outils numériques.",
+      "tags": ["Python", "SQL", "Bash", "Linux", "Support"]
     },
     {
-      "period": "2020 — 2021",
-      "role": "Développeur Junior",
-      "company": "Nom de l'entreprise",
-      "location": "Ville",
-      "description": "Placeholder : décris tes missions principales, tes réalisations et l'impact de ton travail.",
-      "tags": ["HTML", "CSS", "JavaScript", "PHP"]
+      "period": "Fév. — Avr. 2019",
+      "role": "Stagiaire Développeur",
+      "company": "Sofareva (Linareva)",
+      "location": "Espagne",
+      "description": "Optimisation de la plateforme e-commerce via le développement de fonctionnalités web et l'analyse des données utilisateurs, améliorant les performances globales de conversion.",
+      "tags": ["Développement web", "Analyse de données", "E-commerce"]
     }
   ],
   "skills": [
     {
-      "category": "Front-End",
+      "category": "IA, Data & Cybersécurité",
       "items": [
-        { "name": "HTML / CSS / JavaScript", "level": 90 },
-        { "name": "React / Vue", "level": 80 },
-        { "name": "Responsive Design", "level": 85 }
+        { "name": "IA générative & prompt engineering", "level": 85 },
+        { "name": "Agents IA / API OpenAI & REST", "level": 80 },
+        { "name": "Automatisation no-code (n8n, Make, Zapier)", "level": 85 },
+        { "name": "Collecte & analyse de données", "level": 78 },
+        { "name": "Cybersécurité & RGPD", "level": 72 }
       ]
     },
     {
-      "category": "Back-End",
+      "category": "Développement",
       "items": [
-        { "name": "Node.js / Express", "level": 80 },
-        { "name": "PHP / MySQL", "level": 75 },
-        { "name": "APIs REST / GraphQL", "level": 75 }
+        { "name": "Python", "level": 80 },
+        { "name": "SQL (SQLite, MySQL)", "level": 75 },
+        { "name": "Bash / Linux", "level": 75 },
+        { "name": "C / Java", "level": 60 },
+        { "name": "HTML / CSS", "level": 70 }
       ]
     },
     {
-      "category": "Outils & Méthodes",
+      "category": "Métier & Méthodes",
       "items": [
-        { "name": "Git / GitHub", "level": 85 },
-        { "name": "Docker", "level": 65 },
-        { "name": "Agile / Scrum", "level": 80 }
+        { "name": "Conseil & accompagnement", "level": 85 },
+        { "name": "Pédagogie & formation", "level": 85 },
+        { "name": "Git / VS Code", "level": 80 },
+        { "name": "Workflows & automatisation", "level": 80 }
       ]
     }
   ],
   "languages": [
     { "name": "Français", "level": "Langue maternelle" },
-    { "name": "Anglais", "level": "Professionnel" },
-    { "name": "Espagnol", "level": "Notions" }
+    { "name": "Anglais", "level": "TOEIC 800" },
+    { "name": "Espagnol", "level": "Professionnel limité" },
+    { "name": "Japonais", "level": "Élémentaire (JLPT5)" }
   ],
   "projects": [
     {
-      "title": "Nom du projet 1",
+      "title": "Automatisation de workflows métiers",
+      "category": "IA & No-code",
+      "description": "Intégration d'outils no-code (n8n, Make, Zapier) et d'agents IA pour automatiser les processus clés d'entreprises et réduire le temps consacré aux tâches répétitives.",
+      "tags": ["n8n", "OpenAI", "API REST", "Agents IA"],
+      "link": "",
+      "demo": ""
+    },
+    {
+      "title": "Ateliers IA générative pour TPE/PME",
+      "category": "Formation",
+      "description": "Conception de supports pédagogiques et animation d'ateliers pratiques sur l'IA générative pour former des publics non techniques à ses cas d'usage métiers.",
+      "tags": ["IA générative", "GPT", "Pédagogie"],
+      "link": "",
+      "demo": ""
+    },
+    {
+      "title": "Fiabilisation d'un système d'information interne",
+      "category": "Développement",
+      "description": "Développement et maintenance de solutions bureautiques et web (Python, SQL, Bash) pour fiabiliser et rendre plus efficace le système d'information d'une organisation.",
+      "tags": ["Python", "SQL", "Bash"],
+      "link": "",
+      "demo": ""
+    },
+    {
+      "title": "Optimisation d'une plateforme e-commerce",
       "category": "Web",
-      "description": "Placeholder : décris le projet, ton rôle et le résultat obtenu.",
-      "tags": ["React", "Node.js"],
-      "link": "https://github.com/ton-compte",
-      "demo": ""
-    },
-    {
-      "title": "Nom du projet 2",
-      "category": "Mobile",
-      "description": "Placeholder : décris le projet, ton rôle et le résultat obtenu.",
-      "tags": ["Flutter", "Firebase"],
-      "link": "https://github.com/ton-compte",
-      "demo": ""
-    },
-    {
-      "title": "Nom du projet 3",
-      "category": "Design",
-      "description": "Placeholder : décris le projet, ton rôle et le résultat obtenu.",
-      "tags": ["Figma", "UI/UX"],
-      "link": "https://github.com/ton-compte",
-      "demo": ""
-    },
-    {
-      "title": "Nom du projet 4",
-      "category": "Web",
-      "description": "Placeholder : décris le projet, ton rôle et le résultat obtenu.",
-      "tags": ["Vue.js", "SCSS"],
-      "link": "https://github.com/ton-compte",
+      "description": "Développement de fonctionnalités web et analyse des données utilisateurs pour améliorer les performances de conversion d'une plateforme e-commerce.",
+      "tags": ["Développement web", "Analytics"],
+      "link": "",
       "demo": ""
     }
   ],
   "education": [
     {
-      "period": "2018 — 2020",
-      "degree": "Master Informatique",
-      "school": "Nom de l'école ou université",
-      "place": "Ville",
-      "description": "Placeholder : détail du parcours, spécialisation, projets notables."
+      "period": "2018 — 2021",
+      "degree": "Ingénieur MSIR — Option Cybersécurité",
+      "school": "IMERIR",
+      "place": "Perpignan",
+      "description": "Échange Erasmus à la HAMK (Finlande) en 2021. Spécialisation en cybersécurité et systèmes intelligents."
     },
     {
-      "period": "2015 — 2018",
-      "degree": "Licence Informatique",
-      "school": "Nom de l'école ou université",
-      "place": "Ville",
-      "description": "Placeholder : détail du parcours, spécialisation, projets notables."
+      "period": "2016 — 2018",
+      "degree": "BTS Systèmes Numériques — Électronique & Communication",
+      "school": "Lycée",
+      "place": "Perpignan",
+      "description": "Formation aux systèmes numériques, électronique et télécommunications."
+    },
+    {
+      "period": "2012 — 2016",
+      "degree": "Baccalauréat Scientifique — Sciences de l'Ingénieur",
+      "school": "Lycée",
+      "place": "Perpignan",
+      "description": "Baccalauréat scientifique, spécialité sciences de l'ingénieur."
     }
   ],
-  "interests": ["Photographie", "Veille technologique", "Sport", "Open Source"],
-  "footer": "© 2026 Prénom NOM — CV développé avec HTML, CSS & JavaScript"
+  "interests": [
+    "Judo (ceinture noire)",
+    "Basketball",
+    "Musculation",
+    "Culture japonaise",
+    "Voyages en Asie"
+  ],
+  "footer": "© 2026 Florian Guichard — CV développé avec HTML, CSS & JavaScript"
 }
