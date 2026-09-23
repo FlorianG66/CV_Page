@@ -118,6 +118,38 @@
       "tags": ["Développement web", "Analytics"],
       "link": "",
       "demo": ""
+    },
+    {
+      "title": "Formation IA — Niveau 1 : les bases de l'IA",
+      "category": "Formation",
+      "description": "Initiation aux fondamentaux de l'IA : fonctionnement des modèles, cas d'usage métiers, limites éthiques et démo d'outils d'IA générative.",
+      "tags": ["IA", "GPT", "Pédagogie"],
+      "link": "",
+      "demo": ""
+    },
+    {
+      "title": "Formation IA — Niveau 2 : automatisation de processus",
+      "category": "Formation",
+      "description": "Atelier avancé sur l'automatisation des processus métiers avec des outils no-code et des agents IA (n8n, Make, Zapier, API OpenAI).",
+      "tags": ["Automatisation", "n8n", "Agents IA"],
+      "link": "",
+      "demo": ""
+    },
+    {
+      "title": "Accompagnement cybersécurité & RGPD",
+      "category": "Cybersécurité",
+      "description": "Diagnostic de la posture cybersécurité et mise en conformité RGPD de TPE/PME : analyse des risques, préconisations et sécurisation des pratiques.",
+      "tags": ["Cybersécurité", "RGPD", "Conseil"],
+      "link": "",
+      "demo": ""
+    },
+    {
+      "title": "Conférences IA en ligne",
+      "category": "Formation",
+      "description": "Animation de conférences et masterclass en ligne sur l'IA pour présenter ses enjeux et ses usages concrets aux professionnels.",
+      "tags": ["IA générative", "Conférence"],
+      "link": "",
+      "demo": ""
     }
   ],
   "education": [
