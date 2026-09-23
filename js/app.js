@@ -257,6 +257,43 @@ function renderFooter(d) {
   setText("footerText", d.footer);
 }
 
+function renderTestimonials(d) {
+  const section = qs("#temoignages");
+  const list = qs("#testimonialsList");
+  const items = (d.testimonials || []).filter(
+    (t) => t && (t.nom || t.prenom) && t.contenu
+  );
+  if (!items.length) {
+    section.style.display = "none";
+    return;
+  }
+  section.style.display = "";
+  list.innerHTML = items
+    .map((t) => {
+      const initials = ((t.prenom || "") + " " + (t.nom || "")).trim()
+        .split(" ")
+        .map((w) => w[0] ? w[0].toUpperCase() : "")
+        .slice(0, 2)
+        .join("");
+      const name = [t.prenom, t.nom].filter(Boolean).join(" ");
+      return (
+        '<article class="testimonial-card reveal">' +
+        '<div class="tquote">”</div>' +
+        "<p class=\"tcontent\">" + escapeHtml(t.contenu) + "</p>" +
+        '<footer class="tauthor">' +
+        '<span class="tavatar">' + escapeHtml(initials) + "</span>" +
+        '<span class="tmeta"><strong>' + escapeHtml(name) + "</strong>" +
+        (t.poste ? "<small>" + escapeHtml(t.poste) + "</small>" : "") +
+        "</span>" +
+        (t.linkedin
+          ? '<a class="tlinkedin" href="' + t.linkedin + '" target="_blank" rel="noopener">LinkedIn ↗</a>'
+          : "") +
+        "</footer></article>"
+      );
+    })
+    .join("");
+}
+
 /* ---------- Aperçu imprimable (PDF 1 page) ---------- */
 
 function renderPrint(d) {
@@ -466,6 +503,45 @@ function setupPdf() {
   qs("#pdfBtn").addEventListener("click", () => window.print());
 }
 
+function setupContactForm() {
+  const form = qs("#contactForm");
+  if (!form) return;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const note = qs("#formNote");
+    const btn = form.querySelector("button[type=submit]");
+    const data = Object.fromEntries(new FormData(form).entries());
+    btn.disabled = true;
+    btn.textContent = "Envoi en cours…";
+    note.hidden = false;
+    note.className = "form-note";
+    note.textContent = "Envoi de votre message…";
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/florian.guichard66@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (res.ok && json.success) {
+        form.reset();
+        note.classList.remove("error");
+        note.textContent = "Merci, votre message a bien été envoyé ! Je vous répondrai rapidement.";
+      } else {
+        note.classList.add("error");
+        note.textContent = "Une erreur est survenue : " + (json.message || "réessayez plus tard.") +
+          " Vous pouvez aussi m'écrire directement à " + (data._next ? "l'adresse de contact." : "florian.guichard66@gmail.com.");
+      }
+    } catch (err) {
+      note.classList.add("error");
+      note.textContent = "Impossible d'envoyer pour l'instant. Écrivez-moi à florian.guichard66@gmail.com ou réessayez.";
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Envoyer le message";
+    }
+  });
+}
+
 /* ---------- Chargement des données ---------- */
 
 async function loadData() {
@@ -493,12 +569,14 @@ async function loadData() {
   renderEducation(data);
   renderContact(data);
   renderFooter(data);
+  renderTestimonials(data);
   renderPrint(data);
 
   setupRoleRotator(data.profile.roles);
   setupTheme();
   setupNav();
   setupPdf();
+  setupContactForm();
   setupReveal();
   setupSkillsAnimation();
 })();

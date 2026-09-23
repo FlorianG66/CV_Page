@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CV de Prénom NOM — Développeur Full-Stack" />
-  <title>Prénom NOM — Développeur Full-Stack</title>
+  <meta name="description" content="Florian Guichard — Consultant IA & Data | Cybersécurité | Transition Numérique. Ingénieur Bac+5 spécialisé en projets Data & IA, accompagnement de 60+ TPE/PME." />
+
+  <!-- Open Graph / partage réseaux sociaux -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Florian Guichard — Consultant IA & Data | Cybersécurité" />
+  <meta property="og:description" content="Ingénieur Bac+5 spécialisé en projets Data & IA. 60+ TPE/PME accompagnées, formations & masterclass IA, automatisation no-code, cybersécurité & RGPD." />
+  <meta property="og:url" content="https://floriang66.github.io/CV_Page/" />
+  <meta property="og:image" content="https://floriang66.github.io/CV_Page/img/og.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Florian Guichard — Consultant IA & Data</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -137,6 +147,17 @@
       </div>
     </section>
 
+    <!-- Témoignages -->
+    <section id="temoignages" class="section" style="display:none">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Recommandations</span>
+          <h3 class="section-title">Témoignages</h3>
+        </div>
+        <div class="testimonials-grid" id="testimonialsList"></div>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="section section-alt">
       <div class="container">
@@ -145,6 +166,36 @@
           <h3 class="section-title">Parlons de votre projet</h3>
         </div>
         <div class="contact-grid" id="contactList"></div>
+
+        <div class="reveal">
+          <form id="contactForm" class="form-card" action="https://formsubmit.co/florian.guichard66@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nouveau message depuis votre CV" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://floriang66.github.io/CV_Page/#contact" />
+            <h4 class="block-title">Envoyez-moi un message</h4>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="fName">Nom</label>
+                <input type="text" id="fName" name="nom" placeholder="Votre nom" required />
+              </div>
+              <div class="form-field">
+                <label for="fEmail">Email</label>
+                <input type="email" id="fEmail" name="email" placeholder="vous@exemple.fr" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="fSubject">Sujet</label>
+              <input type="text" id="fSubject" name="sujet" placeholder="Objet de votre message" />
+            </div>
+            <div class="form-field">
+              <label for="fMessage">Message</label>
+              <textarea id="fMessage" name="message" rows="5" placeholder="Votre message…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            <p class="form-note" id="formNote" hidden></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
