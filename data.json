@@ -1,0 +1,135 @@
+{
+  "profile": {
+    "name": "Prénom NOM",
+    "initials": "PV",
+    "roles": ["Développeur Full-Stack", "Développeur Web", "Ingénieur Logiciel"],
+    "tagline": "Je conçois des applications web modernes, rapides et faciles à utiliser.",
+    "bio": "Passionné par le développement web depuis plusieurs années, je transforme des idées en produits concrets. J'aime le travail en équipe, l'apprentissage continu et les défis techniques. Placeholder : remplace ce texte par ton introduction personnelle.",
+    "photo": "",
+    "location": "Ville, Pays",
+    "availability": "Disponible",
+    "availabilityIcon": "✓",
+    "stats": [
+      { "value": "5+", "label": "Années d'expérience" },
+      { "value": "30+", "label": "Projets réalisés" },
+      { "value": "10+", "label": "Clients satisfaits" }
+    ]
+  },
+  "contact": {
+    "email": "prenom.nom@email.com",
+    "phone": "+33 6 00 00 00 00",
+    "github": "https://github.com/ton-compte",
+    "linkedin": "https://www.linkedin.com/in/ton-profil",
+    "website": "https://tonsite.com",
+    "cvPdf": ""
+  },
+  "experience": [
+    {
+      "period": "2023 — Présent",
+      "role": "Développeur Full-Stack",
+      "company": "Nom de l'entreprise",
+      "location": "Ville",
+      "description": "Placeholder : décris tes missions principales, tes réalisations et l'impact de ton travail.",
+      "tags": ["React", "Node.js", "PostgreSQL", "Docker"]
+    },
+    {
+      "period": "2021 — 2023",
+      "role": "Développeur Front-End",
+      "company": "Nom de l'entreprise",
+      "location": "Ville",
+      "description": "Placeholder : décris tes missions principales, tes réalisations et l'impact de ton travail.",
+      "tags": ["JavaScript", "Vue.js", "SCSS", "REST API"]
+    },
+    {
+      "period": "2020 — 2021",
+      "role": "Développeur Junior",
+      "company": "Nom de l'entreprise",
+      "location": "Ville",
+      "description": "Placeholder : décris tes missions principales, tes réalisations et l'impact de ton travail.",
+      "tags": ["HTML", "CSS", "JavaScript", "PHP"]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Front-End",
+      "items": [
+        { "name": "HTML / CSS / JavaScript", "level": 90 },
+        { "name": "React / Vue", "level": 80 },
+        { "name": "Responsive Design", "level": 85 }
+      ]
+    },
+    {
+      "category": "Back-End",
+      "items": [
+        { "name": "Node.js / Express", "level": 80 },
+        { "name": "PHP / MySQL", "level": 75 },
+        { "name": "APIs REST / GraphQL", "level": 75 }
+      ]
+    },
+    {
+      "category": "Outils & Méthodes",
+      "items": [
+        { "name": "Git / GitHub", "level": 85 },
+        { "name": "Docker", "level": 65 },
+        { "name": "Agile / Scrum", "level": 80 }
+      ]
+    }
+  ],
+  "languages": [
+    { "name": "Français", "level": "Langue maternelle" },
+    { "name": "Anglais", "level": "Professionnel" },
+    { "name": "Espagnol", "level": "Notions" }
+  ],
+  "projects": [
+    {
+      "title": "Nom du projet 1",
+      "category": "Web",
+      "description": "Placeholder : décris le projet, ton rôle et le résultat obtenu.",
+      "tags": ["React", "Node.js"],
+      "link": "https://github.com/ton-compte",
+      "demo": ""
+    },
+    {
+      "title": "Nom du projet 2",
+      "category": "Mobile",
+      "description": "Placeholder : décris le projet, ton rôle et le résultat obtenu.",
+      "tags": ["Flutter", "Firebase"],
+      "link": "https://github.com/ton-compte",
+      "demo": ""
+    },
+    {
+      "title": "Nom du projet 3",
+      "category": "Design",
+      "description": "Placeholder : décris le projet, ton rôle et le résultat obtenu.",
+      "tags": ["Figma", "UI/UX"],
+      "link": "https://github.com/ton-compte",
+      "demo": ""
+    },
+    {
+      "title": "Nom du projet 4",
+      "category": "Web",
+      "description": "Placeholder : décris le projet, ton rôle et le résultat obtenu.",
+      "tags": ["Vue.js", "SCSS"],
+      "link": "https://github.com/ton-compte",
+      "demo": ""
+    }
+  ],
+  "education": [
+    {
+      "period": "2018 — 2020",
+      "degree": "Master Informatique",
+      "school": "Nom de l'école ou université",
+      "place": "Ville",
+      "description": "Placeholder : détail du parcours, spécialisation, projets notables."
+    },
+    {
+      "period": "2015 — 2018",
+      "degree": "Licence Informatique",
+      "school": "Nom de l'école ou université",
+      "place": "Ville",
+      "description": "Placeholder : détail du parcours, spécialisation, projets notables."
+    }
+  ],
+  "interests": ["Photographie", "Veille technologique", "Sport", "Open Source"],
+  "footer": "© 2026 Prénom NOM — CV développé avec HTML, CSS & JavaScript"
+}
