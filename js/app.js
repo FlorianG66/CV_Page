@@ -374,6 +374,7 @@ async function loadData() {
   renderExperience(data);
   renderSkills(data);
   renderLanguages(data);
+  renderInterests(data);
   renderProjects(data);
   renderEducation(data);
   renderContact(data);
