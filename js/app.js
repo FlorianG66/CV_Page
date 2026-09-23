@@ -47,6 +47,15 @@ const ICONS = {
 
 const COLORS = ["", "cyan", "pink"];
 
+/* Email obfusqué dans les sources : tableau de codes + offset. */
+const EMAIL_KEY = 5;
+let CONTACT_EMAIL = "";
+
+function deobfuscateEmail(v) {
+  if (Array.isArray(v)) return v.map((n) => String.fromCharCode(n - EMAIL_KEY)).join("");
+  return String(v || "");
+}
+
 /* ---------- Utilitaires ---------- */
 
 function deepMerge(base, override) {
@@ -124,13 +133,14 @@ function cleanDomain(url) {
 
 function renderAbout(d) {
   const bio = qs("#aboutBio");
+  const email = deobfuscateEmail(d.contact.email);
   let html =
     escapeHtml(d.profile.bio) +
     " Je suis basé(e) à <strong>" + escapeHtml(d.profile.location) + "</strong>.";
-  if (d.contact.email) {
+  if (email) {
     html +=
-      ' Vous pouvez me joindre à <a href="mailto:' + d.contact.email +
-      '" style="color:var(--accent-2)">' + escapeHtml(d.contact.email) + "</a>.";
+      ' Vous pouvez me joindre à <a href="mailto:' + email +
+      '" style="color:var(--accent-2)">' + escapeHtml(email) + "</a>.";
   }
   bio.innerHTML = html;
 }
@@ -258,8 +268,9 @@ function renderEducation(d) {
 
 function renderContact(d) {
   const c = d.contact;
+  const email = deobfuscateEmail(c.email);
   const items = [
-    { icon: ICONS.email, label: "Email", value: c.email, href: "mailto:" + c.email },
+    { icon: ICONS.email, label: "Email", value: email, href: "mailto:" + email },
     { icon: ICONS.phone, label: "Téléphone", value: c.phone, href: "tel:" + c.phone.replace(/\s/g, "") },
     { icon: ICONS.github, label: "GitHub", value: cleanDomain(c.github), href: c.github },
     { icon: ICONS.linkedin, label: "LinkedIn", value: cleanDomain(c.linkedin), href: c.linkedin }
@@ -321,10 +332,11 @@ function renderTestimonials(d) {
 function renderPrint(d) {
   const p = d.profile;
   const c = d.contact;
+  const email = deobfuscateEmail(c.email);
 
   const contactItems = [
     p.location && { tag: "📍", text: p.location },
-    c.email && { tag: "✉", text: c.email },
+    email && { tag: "✉", text: email },
     c.phone && { tag: "☏", text: c.phone },
     c.linkedin && { tag: "in", text: cleanDomain(c.linkedin) },
     c.github && { tag: "gh", text: cleanDomain(c.github) },
@@ -528,6 +540,7 @@ function setupPdf() {
 function setupContactForm() {
   const form = qs("#contactForm");
   if (!form) return;
+  form.action = "https://formsubmit.co/" + CONTACT_EMAIL;
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const note = qs("#formNote");
@@ -539,7 +552,7 @@ function setupContactForm() {
     note.className = "form-note";
     note.textContent = "Envoi de votre message…";
     try {
-      const res = await fetch("https://formsubmit.co/ajax/florian.guichard66@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/" + CONTACT_EMAIL, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(data)
@@ -552,11 +565,11 @@ function setupContactForm() {
       } else {
         note.classList.add("error");
         note.textContent = "Une erreur est survenue : " + (json.message || "réessayez plus tard.") +
-          " Vous pouvez aussi m'écrire directement à " + (data._next ? "l'adresse de contact." : "florian.guichard66@gmail.com.");
+          " Vous pouvez aussi m'écrire directement à l'adresse de contact du site.";
       }
     } catch (err) {
       note.classList.add("error");
-      note.textContent = "Impossible d'envoyer pour l'instant. Écrivez-moi à florian.guichard66@gmail.com ou réessayez.";
+      note.textContent = "Impossible d'envoyer pour l'instant. Écrivez-moi via l'adresse de contact du site ou réessayez.";
     } finally {
       btn.disabled = false;
       btn.textContent = "Envoyer le message";
@@ -580,6 +593,8 @@ async function loadData() {
 
 (async function init() {
   const data = await loadData();
+
+  CONTACT_EMAIL = deobfuscateEmail(data.contact.email);
 
   renderHero(data);
   renderAbout(data);
