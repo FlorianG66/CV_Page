@@ -282,6 +282,7 @@ function renderProjects(d) {
     list.innerHTML = filtered
       .map((p) =>
         '<article class="project-card"><span class="project-cat">' + escapeHtml(p.category) + "</span>" +
+        (p.status ? '<span class="project-status">' + escapeHtml(p.status) + "</span>" : "") +
         '<h4 class="project-title">' + escapeHtml(p.title) + "</h4>" +
         '<p class="project-desc">' + escapeHtml(p.description) + "</p>" +
         '<div class="project-tags">' + (p.tags || []).map((t) =>
@@ -452,6 +453,7 @@ function renderPrint(d) {
     .map(
       (pr) =>
         '<span class="pproj"><span class="pproj-title">' + escapeHtml(pr.title) +
+        (pr.status ? ' <em class="pproj-wip">' + escapeHtml(pr.status) + "</em>" : "") +
         '</span><small>' + escapeHtml(pr.category) + "</small></span>"
     )
     .join("");

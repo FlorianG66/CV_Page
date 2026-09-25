@@ -93,6 +93,7 @@
       "category": "Développement",
       "items": [
         { "name": "Python", "level": 90 },
+        { "name": "FastAPI", "level": 70 },
         { "name": "Bash / Linux", "level": 80 },
         { "name": "HTML / CSS", "level": 85 },
         { "name": "SQL (SQLite, MySQL)", "level": 85 },
@@ -122,24 +123,44 @@
       "tags": ["FastAPI", "Next.js", "Agents IA", "SaaS"],
       "link": "https://github.com/FlorianG66/AgentHub",
       "demo": "",
+      "status": "En cours de développement",
       "detail": [
         "AgentHub est une plateforme SaaS permettant aux TPE/PME de créer et orchestrer plusieurs agents IA : qualification de prospects, support client, relance, synthèse de documents… Chaque agent est configurable et une file d'orchestration coordonne leur exécution selon des scénarios métiers.",
         "Mon rôle : conception de l'architecture multi-agents, implémentation de l'orchestration et des workflows, et déploiement de la plateforme. Le code est développé en approche vibe coding — j'assure la conception, l'architecture et la revue, et je m'appuie sur un agent de code pour accélérer l'écriture.",
-        "Réseau : FastAPI (Python) en back, Next.js en front. À venir : mise en open source.",
-        "Le repo est privé pour l'instant — n'hésitez pas à me demander une démo ou une présentation."
+        "Réseau : FastAPI (Python) en back, Next.js en front.",
+        "Projet en cours de développement, non achevé : l'orchestration et l'API back sont fonctionnelles, l'interface front est en cours. Le code est public sur GitHub, ce qui permet de lire l'implémentation plutôt que de la croire sur parole."
       ]
     },
     {
       "title": "Radar — Veille concurrentielle des prix",
       "category": "Data",
       "description": "Outil de surveillance des prix, de la disponibilité et des promotions chez les concurrents, pour aider les entreprises à piloter leur positionnement.",
-      "tags": ["Python", "Scraping", "Veille"],
-      "link": "",
+      "tags": ["Python", "FastAPI", "Playwright", "Redis", "PostgreSQL", "Stripe", "Scraping", "Veille"],
+      "link": "https://github.com/FlorianG66/Radar",
       "demo": "",
+      "status": "En cours de développement",
       "detail": [
-        "Radar collecte automatiquement les prix, la disponibilité et les promotions des produits chez les concurrents, puis les restitue dans des rapports de synthèse pour aider les entreprises à piloter leur positionnement.",
-        "Le projet couvre la collecte (scraping et APIs), le nettoyage et la normalisation des données, ainsi que la détection d'événements commerciaux (baisses, ruptures, promotions) pour alerter sur les mouvements du marché.",
-        "Réalisé en Python avec une approche de développement assistée par IA (vibe coding) : je pilote la conception, l'architecture et la revue de code. Repo privé — accessible sur demande."
+        "Radar est un SaaS de veille concurrentielle : il scrute périodiquement les fiches produits de vos concurrents, détecte les changements (prix, disponibilité, promotions) et vous alerte en temps réel.",
+        "Le projet couvre la collecte (scraping HTTP et Playwright pour les sites JavaScript), la normalisation des données, puis un moteur de détection qui compare les snapshots et émet des événements typés. S'y ajoutent les alertes e-mail, l'import en masse, le billing Stripe et une CI.",
+        "Stack : FastAPI, SQLAlchemy 2.0, Alembic, Pydantic v2, Redis + RQ pour les files de jobs, Playwright pour le scraping, PostgreSQL.",
+        "Réalisé en Python avec une approche de développement assistée par IA (vibe coding) : je pilote la conception, l'architecture et la revue de code. Le code est public sur GitHub.",
+        "Projet en cours de développement, non achevé : l'API back-end, le scraping, la détection, les notifications et le billing sont en place et testés, mais l'interface Next.js (auth, dashboard, fil d'événements, page tarifs) reste à développer, tout comme l'export CSV et l'API publique."
+      ]
+    },
+    {
+      "title": "qraft — Générateur de QR codes avec statistiques",
+      "category": "Web",
+      "description": "Plateforme web de génération de QR codes (URL ou vCard) avec comptes utilisateurs, bibliothèque personnelle et statistiques de scan.",
+      "tags": ["Node.js", "JavaScript", "SQLite", "Sécurité", "QR code"],
+      "link": "https://github.com/FlorianG66/qraft",
+      "demo": "",
+      "status": "En cours de développement",
+      "detail": [
+        "qraft génère des QR codes à partir d'une URL ou d'une vCard 3.0, avec aperçu en direct, personnalisation des couleurs et export PNG 1024 px ou SVG vectoriel. Chaque QR code enregistré est associé à une URL de suivi qui mesure le scan avant de rediriger vers la destination.",
+        "Les statistiques de scan Agrègent le nombre de scans, l'évolution sur 30 jours, le dernier scan, le type d'appareil et le domaine de provenance, avec réconciliation des agrégats au démarrage et purge des événements bruts au-delà de 365 jours.",
+        "Sécurité : mots de passe hachés avec scrypt et sel aléatoire, sessions par cookie HttpOnly/SameSite=Strict dont seul le hachage est stocké, jetons CSRF, requêtes SQL préparées, limitation des tentatives, en-têtes CSP et HSTS, et refus des URL contenant des identifiants ou pointant vers des réseaux privés.",
+        "Réalisé en JavaScript sur Node.js 22 avec le module natif node:sqlite et sans aucune dépendance npm, avec une suite de tests d'intégration qui démarre un serveur isolé sur une base temporaire.",
+        "Projet en cours de développement, non achevé : la plateforme est fonctionnelle en local, mais n'est pas prête pour une mise en ligne publique. Reste à faire la vérification des adresses e-mail, la réinitialisation de mot de passe, les sauvegardes chiffrées, le rate limiting partagé entre instances, la migration vers PostgreSQL et la modération des destinations. Le suivi des scans nécessite en outre une origine publique HTTPS configurée."
       ]
     },
     {

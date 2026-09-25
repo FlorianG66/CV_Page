@@ -283,6 +283,15 @@ a { color: inherit; text-decoration: none; }
 .skill-card h4 { font-size: 1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 .skill-card h4 .skill-emoji { font-size: 1.2rem; }
 
+/* Mention "projet non achevé" : affiché seulement si data.json le précise. */
+.project-status {
+  display: inline-block; margin-left: 8px; padding: 3px 9px;
+  border: 1px solid rgba(249, 115, 22, 0.45); border-radius: 99px;
+  background: rgba(249, 115, 22, 0.12); color: #c2410c;
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.01em;
+  vertical-align: middle;
+}
+
 /* Mot-clé = pastille dont le remplissage coloré matérialise le niveau.
    Le libellé passe au-dessus du remplissage, aucun chiffre n'est affiché. */
 .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -609,6 +618,10 @@ a { color: inherit; text-decoration: none; }
   .print-area .pkw-fill.moyen { background: rgba(249, 115, 22, 0.20); }
   .print-area .pkw-fill.haut  { background: rgba(59, 130, 246, 0.20); }
   .print-area .pkw-label { position: relative; color: #1e293b; }
+  .print-area .pproj-wip {
+    font-style: normal; font-size: 6pt; font-weight: 600;
+    color: #c2410c; white-space: nowrap;
+  }
 
   /* --- Centres d'intérêt --- */
   .print-area .pinterests { display: flex; flex-wrap: wrap; gap: 1.2mm; }
