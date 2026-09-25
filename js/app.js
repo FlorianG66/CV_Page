@@ -143,24 +143,34 @@ function cleanDomain(url) {
   return String(url).replace(/^https?:\/\//, "").replace(/\/$/, "").replace("www.", "");
 }
 
+/* Découpe un texte en paragraphes : une ligne vide sépare deux blocs. */
+function toParagraphs(text) {
+  return String(text || "")
+    .split(/\n\s*\n/)
+    .map((t) => t.trim())
+    .filter(Boolean)
+    .map((t) => "<p>" + escapeHtml(t) + "</p>")
+    .join("");
+}
+
 function renderAbout(d) {
   const p = d.profile;
   const bio = qs("#aboutBio");
   const email = deobfuscateEmail(d.contact.email);
-  let html = escapeHtml(p.bio);
+  const blocks = toParagraphs(p.bio);
 
   if (p.location) {
     let place = "Je suis basé à <strong>" + escapeHtml(p.location) + "</strong>";
     if (p.mobility) place += ", disponible en <strong>" + escapeHtml(String(p.mobility).toLowerCase()) + "</strong>";
     if (p.travel) place += ", " + escapeHtml(p.travel);
-    html += " " + place + ".";
+    blocks += "<p>" + place + ".</p>";
   }
   if (email) {
-    html +=
-      ' Vous pouvez me joindre à <a href="mailto:' + email +
-      '" style="color:var(--accent-2)">' + escapeHtml(email) + "</a>.";
+    blocks +=
+      '<p>Vous pouvez me joindre à <a href="mailto:' + email +
+      '" style="color:var(--accent-2)">' + escapeHtml(email) + "</a>.</p>";
   }
-  bio.innerHTML = html;
+  bio.innerHTML = blocks;
 }
 
 function renderSearch(d) {
@@ -451,7 +461,7 @@ function renderPrint(d) {
     '<aside class="paside">' +
 
     (p.bio
-      ? '<section class="pbox"><h2>Profil</h2><p class="pprofil">' + escapeHtml(p.bio) + "</p></section>"
+      ? '<section class="pbox"><h2>Profil</h2><div class="pprofil">' + toParagraphs(p.bio) + "</div></section>"
       : "") +
 
     '<section class="pbox"><h2>Contact</h2><ul class="pcontact">' +

@@ -228,6 +228,7 @@ a { color: inherit; text-decoration: none; }
 
 .about-card p { color: var(--muted); }
 .about-card p strong { color: var(--text); }
+.about-card p + p { margin-top: 14px; }
 
 /* ---------- « Ce que je recherche » ---------- */
 .search-card {
@@ -561,7 +562,9 @@ a { color: inherit; text-decoration: none; }
   .print-area .pbox > h2::after { content: ''; flex: 1; height: 0.5px; background: #e2e8f0; }
 
   /* --- Profil --- */
-  .print-area .pprofil { margin: 0; color: #334155; font-size: 7.9pt; text-align: justify; }
+  .print-area .pprofil { color: #334155; font-size: 7.9pt; text-align: justify; }
+  .print-area .pprofil p { margin: 0 0 1.8mm; }
+  .print-area .pprofil p:last-child { margin-bottom: 0; }
 
   /* --- Ce que je recherche --- */
   .print-area .psearch {
