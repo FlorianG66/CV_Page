@@ -14,6 +14,7 @@ const DEFAULT_DATA = {
     photo: "",
     location: "Ville, Pays",
     mobility: "",
+    travel: "",
     availability: "Disponible",
     stats: [
       { value: "5+", label: "Années d'expérience" },
@@ -143,11 +144,17 @@ function cleanDomain(url) {
 }
 
 function renderAbout(d) {
+  const p = d.profile;
   const bio = qs("#aboutBio");
   const email = deobfuscateEmail(d.contact.email);
-  let html =
-    escapeHtml(d.profile.bio) +
-    " Je suis basé(e) à <strong>" + escapeHtml(d.profile.location) + "</strong>.";
+  let html = escapeHtml(p.bio);
+
+  if (p.location) {
+    let place = "Je suis basé à <strong>" + escapeHtml(p.location) + "</strong>";
+    if (p.mobility) place += ", disponible en <strong>" + escapeHtml(String(p.mobility).toLowerCase()) + "</strong>";
+    if (p.travel) place += ", " + escapeHtml(p.travel);
+    html += " " + place + ".";
+  }
   if (email) {
     html +=
       ' Vous pouvez me joindre à <a href="mailto:' + email +

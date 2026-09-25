@@ -33,7 +33,8 @@ Page de CV moderne et responsive, 100 % statique (HTML / CSS / JavaScript). Les 
 1. Éditer `data.json` (attention au format JSON valide).
 2. Le rendu repose sur la structure du fichier :
    - `profile.roles` → titre affiché en rotation dans le hero
-   - `profile.mobility` → ligne « lieu · mobilité » sous la photo (masquée si vide)
+   - `profile.mobility` → ligne « lieu · mobilité » sous la photo + mention dans « Qui suis-je ? » (masquée si vide)
+   - `profile.travel` → précisions sur les déplacements, ajoutées en fin de phrase dans « Qui suis-je ? » (ex. `avec possibilité de me déplacer occasionnellement au besoin`)
    - `search` → bloc « Ce que je recherche » (objet `{ "title", "text" }`, masqué si absent)
    - `projects[].detail` → texte dépliant « En savoir plus »
    - `trainings[].detail` → détail de la formation (dépliant)
