@@ -13,6 +13,7 @@ const DEFAULT_DATA = {
     bio: "Passionné par le développement web depuis plusieurs années, je transforme des idées en produits concrets. J'aime le travail en équipe, l'apprentissage continu et les défis techniques.",
     photo: "",
     location: "Ville, Pays",
+    mobility: "",
     availability: "Disponible",
     stats: [
       { value: "5+", label: "Années d'expérience" },
@@ -28,6 +29,7 @@ const DEFAULT_DATA = {
     website: "https://tonsite.com"
   },
   experience: [],
+  search: null,
   skills: [],
   languages: [],
   projects: [],
@@ -102,6 +104,15 @@ function renderHero(d) {
   setText("availabilityText", p.availability);
   document.title = p.name + " — " + p.roles[0];
 
+  const mob = qs("#mobilityChip");
+  if (mob) {
+    const bits = [];
+    if (p.location) bits.push('<span class="meta-ico">📍</span>' + escapeHtml(p.location));
+    if (p.mobility) bits.push('<span class="meta-ico">🌐</span>' + escapeHtml(p.mobility));
+    mob.innerHTML = bits.join('<span class="meta-sep">·</span>');
+    mob.hidden = bits.length === 0;
+  }
+
   if (p.photo) {
     qs("#photoPlaceholder").innerHTML = '<img src="' + p.photo + '" alt="Photo de profil" />';
   } else {
@@ -143,6 +154,19 @@ function renderAbout(d) {
       '" style="color:var(--accent-2)">' + escapeHtml(email) + "</a>.";
   }
   bio.innerHTML = html;
+}
+
+function renderSearch(d) {
+  const card = qs("#searchCard");
+  if (!card) return;
+  const s = d.search;
+  if (!s || !s.text) {
+    card.hidden = true;
+    return;
+  }
+  card.hidden = false;
+  setText("searchTitle", s.title || "Ce que je recherche");
+  setText("searchText", s.text);
 }
 
 function renderExperience(d) {
@@ -336,6 +360,7 @@ function renderPrint(d) {
 
   const contactItems = [
     p.location && { tag: "📍", text: p.location },
+    p.mobility && { tag: "🌐", text: p.mobility },
     email && { tag: "✉", text: email },
     c.phone && { tag: "☏", text: c.phone },
     c.linkedin && { tag: "in", text: cleanDomain(c.linkedin) },
@@ -398,6 +423,11 @@ function renderPrint(d) {
     )
     .join("");
 
+  const search = d.search && d.search.text
+    ? '<section class="pbox"><h2>' + escapeHtml(d.search.title || "Ce que je recherche") +
+      '</h2><p class="psearch">' + escapeHtml(d.search.text) + "</p></section>"
+    : "";
+
   qs("#printArea").innerHTML =
     '<section class="pheader">' +
     '<div class="pheader-main">' +
@@ -432,6 +462,8 @@ function renderPrint(d) {
     '<section class="pmain">' +
 
     (experience ? '<section class="pbox"><h2>Expérience professionnelle</h2>' + experience + "</section>" : "") +
+
+    search +
 
     (education ? '<section class="pbox"><h2>Formation</h2>' + education + "</section>" : "") +
 
@@ -598,6 +630,7 @@ async function loadData() {
 
   renderHero(data);
   renderAbout(data);
+  renderSearch(data);
   renderExperience(data);
   renderSkills(data);
   renderLanguages(data);

@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Florian Guichard — Consultant IA & Data | Cybersécurité | Transition Numérique. Ingénieur Bac+5 spécialisé en projets Data & IA, accompagnement de 60+ TPE/PME." />
+  <meta name="description" content="Florian Guichard — Consultant IA Agentique & Automation. Ingénieur Bac+5, développement d'agents IA et d'automatisation de workflows pour 60+ TPE/PME." />
 
   <!-- Open Graph / partage réseaux sociaux -->
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Florian Guichard — Consultant IA & Data | Cybersécurité" />
-  <meta property="og:description" content="Ingénieur Bac+5 spécialisé en projets Data & IA. 60+ TPE/PME accompagnées, formations & masterclass IA, automatisation no-code, cybersécurité & RGPD." />
+  <meta property="og:title" content="Florian Guichard — Consultant IA Agentique & Automation" />
+  <meta property="og:description" content="Ingénieur Bac+5. Agents IA (API OpenAI/REST) et workflows no-code (n8n, Make, Zapier, Power Automate) pour 60+ TPE/PME. Cybersécurité, RAG & cloud en cours de montée en compétence." />
   <meta property="og:url" content="https://floriang66.github.io/CV_Page/" />
   <meta property="og:image" content="https://floriang66.github.io/CV_Page/img/og.jpg" />
   <meta property="og:locale" content="fr_FR" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <title>Florian Guichard — Consultant IA & Data</title>
+  <title>Florian Guichard — Consultant IA Agentique & Automation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -74,6 +74,7 @@
             <span class="pulse"></span>
             <span id="availabilityText">Disponible</span>
           </div>
+          <div class="meta-chip" id="mobilityChip" hidden></div>
         </div>
       </div>
       <div class="container stats reveal" id="statsRow"></div>
@@ -90,6 +91,10 @@
           <div class="card about-card">
             <p id="aboutBio"></p>
           </div>
+        </div>
+        <div class="card search-card reveal" id="searchCard" hidden>
+          <h4 class="block-title" id="searchTitle"></h4>
+          <p id="searchText"></p>
         </div>
       </div>
     </section>

@@ -2,11 +2,12 @@
   "profile": {
     "name": "Florian Guichard",
     "initials": "FG",
-    "roles": ["Consultant IA & Data", "Cybersécurité", "Transition Numérique"],
-    "tagline": "J'accompagne les organisations dans leurs projets IA, data et cybersécurité, de l'analyse du besoin jusqu'au déploiement.",
-    "bio": "Ingénieur Bac+5 (IMERIR, option cybersécurité), spécialisé en projets Data et IA appliquée. Depuis 4 ans, j'accompagne des organisations dans l'intégration de l'IA générative, l'automatisation de processus métiers et le renforcement de leur posture cybersécurité, de l'analyse du besoin jusqu'au déploiement. À l'aise avec des interlocuteurs techniques et métiers.",
+    "roles": ["Consultant IA Agentique & Automation", "IA Générative", "Automatisation de processus"],
+    "tagline": "Je conçois et déploie des agents IA et des workflows d'automatisation pour les TPE/PME, de l'identification des cas d'usage jusqu'à la mise en production.",
+    "bio": "Ingénieur Bac+5 (IMERIR, option cybersécurité), spécialisé depuis 4 ans dans l'intégration de l'IA générative et l'automatisation de processus métiers pour des TPE/PME, de l'identification des cas d'usage jusqu'au déploiement. Expérience concrète du développement d'agents IA (API OpenAI/REST) et de workflows d'automatisation no-code (n8n, Make, Zapier, Power Automate), associée à une posture de conseil et de pédagogie technique éprouvée auprès d'interlocuteurs métiers non techniques. Formation initiale en cybersécurité, sensibilité RGPD, et montée en compétence active sur les environnements cloud (AWS/Azure/GCP) et les architectures agentiques (RAG, orchestration multi-agents). Anglais courant.",
     "photo": "img/photo.jpg",
     "location": "Perpignan (66)",
+    "mobility": "Full remote",
     "availability": "Ouvert aux opportunités",
     "availabilityIcon": "✓",
     "stats": [
@@ -23,21 +24,25 @@
     "website": "",
     "cvPdf": ""
   },
+  "search": {
+    "title": "Ce que je recherche",
+    "text": "Un poste de Consultant IA Agentique & Automation, pour mettre à profit mon expérience du développement d'agents IA, de l'automatisation de workflows et du conseil client, tout en montant en compétence sur les environnements cloud et l'industrialisation de solutions IA agentiques en production."
+  },
   "experience": [
     {
       "period": "2022 — Aujourd'hui",
       "role": "Conseiller numérique",
       "company": "CCI Pyrénées-Orientales",
       "location": "Perpignan",
-      "description": "Accompagnement individuel de plus de 60 TPE/PME dans leur transformation numérique et cybersécurité, permettant d'accroître leur maturité digitale et l'adoption de solutions sécurisées. Conception de supports pédagogiques et animation d'ateliers pratiques sur l'IA générative pour des publics non techniques. Intégration d'outils no-code (n8n, Make, Zapier) et d'agents IA via API OpenAI/REST pour automatiser les workflows clés.",
-      "tags": ["IA générative", "n8n / Make / Zapier", "API REST", "Cybersécurité", "Pédagogie"]
+      "description": "Conception et développement d'agents IA (API OpenAI/REST) et de workflows d'automatisation no-code (n8n, Make, Zapier, Power Automate) pour connecter systèmes d'information, applications métiers et tâches répétitives, auprès de plus de 60 TPE/PME. Accompagnement individuel des entreprises dans l'identification de cas d'usage IA générative et cybersécurité, du cadrage du besoin jusqu'à la mise en œuvre opérationnelle. Conception de supports pédagogiques et animation de nombreux ateliers pratiques sur l'IA générative et l'automatisation pour former des publics non techniques à ses cas d'usage métiers.",
+      "tags": ["Agents IA", "API OpenAI / REST", "n8n / Make / Zapier", "Power Automate", "Cybersécurité", "Pédagogie"]
     },
     {
       "period": "Sept. 2019 — Oct. 2021",
       "role": "Apprenti Ingénieur Informatique",
       "company": "CCI Pyrénées-Orientales",
       "location": "Perpignan",
-      "description": "Développement et maintenance de solutions bureautiques et web (Python, SQL, Bash), garantissant la fiabilisation du système d'information interne. Création de contenus vidéo et de guides pédagogiques pour renforcer la communication digitale et faciliter la prise en main des outils numériques.",
+      "description": "Développement et maintenance de solutions bureautiques et web (Python, SQL, Bash), garantissant la fiabilisation et l'efficacité du système d'information interne. Création de contenus vidéo et de guides pédagogiques pour renforcer la communication digitale et faciliter la prise en main des outils numériques par les utilisateurs.",
       "tags": ["Python", "SQL", "Bash", "Linux", "Support"]
     },
     {
@@ -45,19 +50,41 @@
       "role": "Stagiaire Développeur",
       "company": "Sofareva (Linareva)",
       "location": "Espagne",
-      "description": "Optimisation de la plateforme e-commerce via le développement de fonctionnalités web et l'analyse des données utilisateurs, améliorant les performances globales de conversion.",
+      "description": "Optimisation d'une plateforme e-commerce via le développement de fonctionnalités web et l'analyse des données utilisateurs, améliorant les performances globales de conversion.",
       "tags": ["Développement web", "Analyse de données", "E-commerce"]
     }
   ],
   "skills": [
     {
-      "category": "IA, Data & Cybersécurité",
+      "category": "IA générative & agentique",
       "items": [
         { "name": "IA générative & prompt engineering", "level": 85 },
-        { "name": "Agents IA / API OpenAI & REST", "level": 80 },
+        { "name": "LLM : GPT, Claude, Gemini, Copilot", "level": 85 },
+        { "name": "Agents IA via API OpenAI / REST", "level": 80 },
+        { "name": "RAG & bases documentaires (notions)", "level": 55 }
+      ]
+    },
+    {
+      "category": "Automatisation & intégration",
+      "items": [
         { "name": "Automatisation no-code (n8n, Make, Zapier)", "level": 85 },
-        { "name": "Collecte & analyse de données", "level": 78 },
-        { "name": "Cybersécurité & RGPD", "level": 72 }
+        { "name": "Microsoft Power Automate", "level": 75 },
+        { "name": "API REST & orchestration de workflows", "level": 80 }
+      ]
+    },
+    {
+      "category": "Cybersécurité & gouvernance",
+      "items": [
+        { "name": "Cybersécurité & RGPD", "level": 72 },
+        { "name": "Confidentialité des données", "level": 70 }
+      ]
+    },
+    {
+      "category": "Cloud (en cours de formation)",
+      "items": [
+        { "name": "AWS", "level": 35 },
+        { "name": "Azure", "level": 35 },
+        { "name": "Google Cloud Platform", "level": 30 }
       ]
     },
     {
@@ -67,22 +94,21 @@
         { "name": "SQL (SQLite, MySQL)", "level": 75 },
         { "name": "Bash / Linux", "level": 75 },
         { "name": "C / Java", "level": 60 },
-        { "name": "HTML / CSS", "level": 70 }
+        { "name": "HTML / CSS", "level": 70 },
+        { "name": "Git / VS Code", "level": 80 }
       ]
     },
     {
-      "category": "Métier & Méthodes",
+      "category": "Conseil & pédagogie",
       "items": [
         { "name": "Conseil & accompagnement", "level": 85 },
-        { "name": "Pédagogie & formation", "level": 85 },
-        { "name": "Git / VS Code", "level": 80 },
-        { "name": "Workflows & automatisation", "level": 80 }
+        { "name": "Pédagogie & formation", "level": 85 }
       ]
     }
   ],
   "languages": [
     { "name": "Français", "level": "Langue maternelle" },
-    { "name": "Anglais", "level": "TOEIC 800" },
+    { "name": "Anglais", "level": "Courant (TOEIC 800)" },
     { "name": "Espagnol", "level": "Professionnel limité" },
     { "name": "Japonais", "level": "Élémentaire (JLPT5)" }
   ],
@@ -117,13 +143,13 @@
     {
       "title": "Automatisation de workflows métiers",
       "category": "IA & No-code",
-      "description": "Intégration d'outils no-code (n8n, Make, Zapier) et d'agents IA pour automatiser les processus clés d'entreprises et réduire le temps consacré aux tâches répétitives.",
-      "tags": ["n8n", "OpenAI", "API REST", "Agents IA"],
+      "description": "Intégration d'outils no-code (n8n, Make, Zapier, Power Automate) et d'agents IA pour automatiser les processus clés d'entreprises et réduire le temps consacré aux tâches répétitives.",
+      "tags": ["n8n", "Power Automate", "OpenAI", "API REST", "Agents IA"],
       "link": "",
       "demo": "",
       "detail": [
         "Objectif : réduire le temps consacré aux tâches répétitives et fiabiliser les processus clés d'une organisation.",
-        "Mon rôle : analyse des processus, conception du scénario d'automatisation, mise en place des outils no-code et agents IA, puis formation des équipes à la prise en main.",
+        "Mon rôle : analyse des processus, conception du scénario d'automatisation, mise en place des outils no-code et agents IA (n8n, Make, Zapier, Power Automate), puis formation des équipes à la prise en main.",
         "Résultat : un gain de temps mesurable sur les tâches métiers, des process documentés et reproductibles, et une montée en compétence des équipes."
       ]
     },
@@ -195,14 +221,14 @@
     {
       "title": "Accompagnement cybersécurité & RGPD",
       "category": "Cybersécurité",
-      "description": "Diagnostic de la posture cybersécurité et mise en conformité RGPD de TPE/PME : analyse des risques, préconisations et sécurisation des pratiques.",
-      "tags": ["Cybersécurité", "RGPD", "Conseil"],
+      "description": "Diagnostic de la posture cybersécurité et mise en conformité RGPD de TPE/PME : analyse des risques, préconisations, confidentialité des données et sécurisation des pratiques.",
+      "tags": ["Cybersécurité", "RGPD", "Confidentialité", "Conseil"],
       "link": "",
       "demo": "",
       "detail": [
         "Objectif : sécuriser et mettre en conformité les systèmes d'information des TPE/PME face aux risques cyber et au RGPD.",
         "Démarche : diagnostic de la posture cybersécurité, analyse des risques, préconisations concrètes (mots de passe, sauvegardes, mises à jour, double authentification), et sensibilisation des équipes.",
-        "Résultat : une feuille de route actionnable, hiérarchisée par priorité de risque, et un accompagnement RGPD (registre des traitements, mentions légales, consentement)."
+        "Résultat : une feuille de route actionnable, hiérarchisée par priorité de risque, et un accompagnement RGPD (registre des traitements, mentions légales, consentement, confidentialité des données)."
       ]
     },
     {
