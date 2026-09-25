@@ -283,20 +283,23 @@ a { color: inherit; text-decoration: none; }
 .skill-card h4 { font-size: 1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 .skill-card h4 .skill-emoji { font-size: 1.2rem; }
 
-.skill { margin-bottom: 16px; }
-.skill:last-child { margin-bottom: 0; }
-.skill-bar-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.9rem; margin-bottom: 8px; }
-.skill-bar-head .skill-name { font-weight: 500; }
+/* Mot-clé = pastille dont le remplissage coloré matérialise le niveau.
+   Le libellé passe au-dessus du remplissage, aucun chiffre n'est affiché. */
+.skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
 
-.skill-bar { height: 7px; border-radius: 99px; background: var(--border); overflow: hidden; }
-.skill-bar-fill { height: 100%; width: 0; border-radius: 99px; background: var(--gradient); transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
-
-/* Réservé aux lecteurs d'écran : le niveau reste accessible
-   même si aucun pourcentage n'est affiché à l'écran. */
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+.sk {
+  position: relative; display: inline-flex; align-items: center;
+  overflow: hidden; max-width: 100%;
+  padding: 7px 15px; border-radius: 99px;
+  background: var(--card); border: 1px solid var(--border);
+  font-size: 0.8rem; font-weight: 500; color: var(--text);
 }
+.sk-fill {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 0;
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.28), rgba(129, 140, 248, 0.28));
+  transition: width 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sk-label { position: relative; }
 
 /* ---------- Langues ------- */
 .languages, .interests { margin-top: 48px; }
@@ -591,10 +594,16 @@ a { color: inherit; text-decoration: none; }
     font-size: 7.4pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;
     color: #6366f1; margin-bottom: 1.4mm;
   }
-  .print-area .ps { margin-bottom: 0.7mm; }
-  .print-area .ps-name { font-size: 7.5pt; font-weight: 500; color: #1e293b; }
-  .print-area .ps-bar { height: 1.4mm; border-radius: 99px; background: #e2e8f0; overflow: hidden; margin-bottom: 1.5mm; }
-  .print-area .ps-bar span { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, #22d3ee, #6366f1); }
+  .print-area .pkw {
+    position: relative; display: inline-flex; overflow: hidden;
+    border: 0.3pt solid #cbd5e1; border-radius: 99px;
+    padding: 0.5mm 1.8mm; margin: 0 0.8mm 1mm 0; font-size: 7pt;
+  }
+  .print-area .pkw-fill {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    background: rgba(99, 102, 241, 0.18);
+  }
+  .print-area .pkw-label { position: relative; color: #1e293b; }
 
   /* --- Centres d'intérêt --- */
   .print-area .pinterests { display: flex; flex-wrap: wrap; gap: 1.2mm; }

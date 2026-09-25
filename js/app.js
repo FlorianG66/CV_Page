@@ -227,16 +227,14 @@ function renderSkills(d) {
   grid.innerHTML = (d.skills || [])
     .map((cat) =>
       '<div class="skill-card"><h4><span class="skill-emoji">⚡</span>' + escapeHtml(cat.category) + "</h4>" +
+      '<div class="skill-list">' +
       cat.items
         .map((s) =>
-          '<div class="skill"><div class="skill-bar-head">' +
-          '<span class="skill-name">' + escapeHtml(s.name) + "</span>" +
-          '<span class="sr-only">' + escapeHtml(s.level) + "</span></div>" +
-          '<div class="skill-bar"><div class="skill-bar-fill" data-level="' +
-          levelWidth(s.level) + '"></div></div></div>'
+          '<span class="sk"><span class="sk-fill" data-level="' + levelWidth(s.level) + '"></span>' +
+          '<span class="sk-label">' + escapeHtml(s.name) + "</span></span>"
         )
         .join("") +
-      "</div>"
+      "</div></div>"
     )
     .join("");
 }
@@ -426,8 +424,8 @@ function renderPrint(d) {
         cat.items
           .map(
             (s) =>
-              '<div class="ps"><span class="ps-name">' + escapeHtml(s.name) + "</span></div>" +
-              '<div class="ps-bar"><span style="width:' + levelWidth(s.level) + '%"></span></div>'
+              '<span class="pkw"><span class="pkw-fill" style="width:' + levelWidth(s.level) + '%"></span>' +
+              '<span class="pkw-label">' + escapeHtml(s.name) + "</span></span>"
           )
           .join("") +
         "</div>"
@@ -542,7 +540,7 @@ function setupSkillsAnimation() {
     },
     { threshold: 0.4 }
   );
-  document.querySelectorAll(".skill-bar-fill").forEach((el) => io.observe(el));
+  document.querySelectorAll(".sk-fill").forEach((el) => io.observe(el));
 }
 
 function setupRoleRotator(roles) {
