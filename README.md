@@ -34,6 +34,9 @@ Page de CV moderne et responsive, 100 % statique (HTML / CSS / JavaScript). Les 
 2. Le rendu repose sur la structure du fichier :
    - `profile.bio` → section « Qui suis-je ? ». Une ligne vide (`\n\n`) sépare deux paragraphes
    - `skills[].items[].level` → pourcentage **de 0 à 100**, jamais affiché à l'écran. Il pilote la largeur du remplissage de la pastille (`.sk`) et sa couleur via `SKILL_BANDS` (`js/app.js`) : `haut` ≥ 67 = bleu, `moyen` ≥ 34 = orange, `bas` = rouge. Ajuster un seuil ou une couleur se fait dans `css/styles.css` (`.sk-fill.haut` / `.moyen` / `.bas`)
+
+> **Après toute modification de `css/styles.css` ou `js/app.js`, lance `node tools/stamp-assets.mjs` puis commite.**
+> Le site étant 100 % statique (aucun build), GitHub Pages sert les assets avec un `max-age` : sans paramètre de version, un simple rechargement peut réafficher l'ancien CSS. Le script estampille `index.html` avec `?v=<empreinte du contenu>` — la version change donc automatiquement dès qu'un fichier change, sans rien incrémenter à la main.
    - `profile.roles` → titre affiché en rotation dans le hero
    - `profile.mobility` → ligne « lieu · mobilité » sous la photo + mention dans « Qui suis-je ? » (masquée si vide)
    - `profile.travel` → précisions sur les déplacements, ajoutées en fin de phrase dans « Qui suis-je ? » (ex. `avec possibilité de me déplacer occasionnellement au besoin`)
