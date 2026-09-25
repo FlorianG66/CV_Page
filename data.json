@@ -59,51 +59,51 @@
     {
       "category": "IA générative & agentique",
       "items": [
-        { "name": "IA générative & prompt engineering", "level": 85 },
-        { "name": "LLM : GPT, Claude, Gemini, Copilot", "level": 85 },
-        { "name": "Agents IA via API OpenAI / REST", "level": 80 },
-        { "name": "RAG & bases documentaires (notions)", "level": 55 }
+        { "name": "IA générative & prompt engineering", "level": "Expert" },
+        { "name": "LLM : GPT, Claude, Gemini, Copilot", "level": "Expert" },
+        { "name": "Agents IA via API OpenAI / REST", "level": "Avancé" },
+        { "name": "RAG & bases documentaires", "level": "Notions" }
       ]
     },
     {
       "category": "Automatisation & intégration",
       "items": [
-        { "name": "Automatisation no-code (n8n, Make, Zapier)", "level": 85 },
-        { "name": "Microsoft Power Automate", "level": 75 },
-        { "name": "API REST & orchestration de workflows", "level": 80 }
+        { "name": "Automatisation no-code (n8n, Make, Zapier)", "level": "Expert" },
+        { "name": "API REST & orchestration de workflows", "level": "Avancé" },
+        { "name": "Microsoft Power Automate", "level": "Avancé" }
       ]
     },
     {
       "category": "Cybersécurité & gouvernance",
       "items": [
-        { "name": "Cybersécurité & RGPD", "level": 72 },
-        { "name": "Confidentialité des données", "level": 70 }
+        { "name": "Cybersécurité & RGPD", "level": "Avancé" },
+        { "name": "Confidentialité des données", "level": "Avancé" }
       ]
     },
     {
       "category": "Cloud (en cours de formation)",
       "items": [
-        { "name": "AWS", "level": 35 },
-        { "name": "Azure", "level": 35 },
-        { "name": "Google Cloud Platform", "level": 30 }
+        { "name": "Microsoft Azure", "level": "Notions" },
+        { "name": "Amazon Web Services (AWS)", "level": "Notions" },
+        { "name": "Google Cloud Platform", "level": "Notions" }
       ]
     },
     {
       "category": "Développement",
       "items": [
-        { "name": "Python", "level": 80 },
-        { "name": "SQL (SQLite, MySQL)", "level": 75 },
-        { "name": "Bash / Linux", "level": 75 },
-        { "name": "C / Java", "level": 60 },
-        { "name": "HTML / CSS", "level": 70 },
-        { "name": "Git / VS Code", "level": 80 }
+        { "name": "Python", "level": "Avancé" },
+        { "name": "SQL (SQLite, MySQL)", "level": "Avancé" },
+        { "name": "Bash / Linux", "level": "Avancé" },
+        { "name": "Git / VS Code", "level": "Avancé" },
+        { "name": "HTML / CSS", "level": "Pratique" },
+        { "name": "C / Java", "level": "Pratique" }
       ]
     },
     {
       "category": "Conseil & pédagogie",
       "items": [
-        { "name": "Conseil & accompagnement", "level": 85 },
-        { "name": "Pédagogie & formation", "level": 85 }
+        { "name": "Conseil & accompagnement", "level": "Expert" },
+        { "name": "Pédagogie & formation", "level": "Expert" }
       ]
     }
   ],

@@ -202,6 +202,18 @@ function renderExperience(d) {
     .join("");
 }
 
+/* Transforme un libellé de niveau en classe CSS : "Avancé" → "avance". */
+function levelKey(label) {
+  return (
+    String(label || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "notions"
+  );
+}
+
 function renderSkills(d) {
   const grid = qs("#skillsList");
   grid.innerHTML = (d.skills || [])
@@ -209,10 +221,10 @@ function renderSkills(d) {
       '<div class="skill-card"><h4><span class="skill-emoji">⚡</span>' + escapeHtml(cat.category) + "</h4>" +
       cat.items
         .map((s) =>
-          '<div class="skill"><div class="skill-bar-head">' +
+          '<div class="skill">' +
           '<span class="skill-name">' + escapeHtml(s.name) + "</span>" +
-          '<span class="skill-level">' + s.level + "%</span></div>" +
-          '<div class="skill-bar"><div class="skill-bar-fill" data-level="' + s.level + '"></div></div></div>'
+          '<span class="skill-level ' + levelKey(s.level) + '">' + escapeHtml(s.level) + "</span>" +
+          "</div>"
         )
         .join("") +
       "</div>"
@@ -405,8 +417,8 @@ function renderPrint(d) {
         cat.items
           .map(
             (s) =>
-              '<div class="ps"><div class="ps-head"><span>' + escapeHtml(s.name) + "</span></div>" +
-              '<div class="ps-bar"><span style="width:' + Math.min(100, Number(s.level) || 0) + '%"></span></div></div>'
+              '<div class="ps"><span class="ps-name">' + escapeHtml(s.name) + "</span>" +
+              '<span class="ps-level ps-' + levelKey(s.level) + '">' + escapeHtml(s.level) + "</span></div>"
           )
           .join("") +
         "</div>"
@@ -506,22 +518,6 @@ function setupReveal() {
     { threshold: 0.12 }
   );
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-}
-
-function setupSkillsAnimation() {
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const fill = entry.target;
-          setTimeout(() => { fill.style.width = fill.dataset.level + "%"; }, 150);
-          io.unobserve(fill);
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
-  document.querySelectorAll(".skill-bar-fill").forEach((el) => io.observe(el));
 }
 
 function setupRoleRotator(roles) {
@@ -666,5 +662,4 @@ async function loadData() {
   setupPdf();
   setupContactForm();
   setupReveal();
-  setupSkillsAnimation();
 })();
