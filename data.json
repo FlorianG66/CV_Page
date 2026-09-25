@@ -140,12 +140,10 @@
       "demo": "",
       "status": "En cours de développement",
       "detail": [
-        "Radar est un SaaS de veille concurrentielle : il scrute périodiquement les fiches produits de vos concurrents, détecte chaque variation (prix, disponibilité, promotions) et vous alerte automatiquement par e-mail.",
-        "Back-end FastAPI (SQLAlchemy 2, Alembic, Pydantic v2). Un scheduler Redis + RQ dispatche les scrapes vers des workers dédiés (pas de scraping dans les handlers HTTP). Collecte HTTP + extracteurs par domaine, avec fallback Playwright pour les sites JavaScript. Détection par comparaison de snapshots.",
-        "Front-end Next.js 16 (App Router, TypeScript, Tailwind) : authentification JWT, tableau de bord, produits, fil des changements, import/export CSV, préférences de notifications, facturation Stripe (portail + checkout), administration.",
-        "Tests backend : 121 tests pytest. L'ensemble est dockerisé (Docker Compose). CI GitHub Actions sur le backend.",
-        "Développé en approche vibe coding (conception, architecture et revue assurées par moi-même, assistant IA pour l'écriture). Code public sur GitHub.",
-        "En cours de développement, non achevé. Fondations solides (sécurité, migrations, sauvegardes, onboarding, tests). La couverture des extracteurs par domaine et des cas d'usage spécifiques est à étendre avant mise en production."
+        "SaaS de veille concurrentielle : surveillance des prix, disponibilité et promotions, détection des changements et alertes e-mail.",
+        "Stack : FastAPI (SQLAlchemy 2, Alembic, Pydantic v2), Redis + RQ (workers asynchrones), Playwright (sites JS), PostgreSQL, Next.js 16 (App Router, TypeScript, Tailwind). Docker Compose + 121 tests pytest.",
+        "Authentification JWT, import/export CSV, facturation Stripe, administration. Développé en approche vibe coding (conception, architecture et revue assurées).",
+        "Projet en cours de développement, non achevé — en phase d'extension de la couverture des extracteurs de scraping."
       ]
     },
     {
