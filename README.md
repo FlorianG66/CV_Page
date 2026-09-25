@@ -33,7 +33,7 @@ Page de CV moderne et responsive, 100 % statique (HTML / CSS / JavaScript). Les 
 1. Éditer `data.json` (attention au format JSON valide).
 2. Le rendu repose sur la structure du fichier :
    - `profile.bio` → section « Qui suis-je ? ». Une ligne vide (`\n\n`) sépare deux paragraphes
-   - `skills[].items[].level` → niveau **qualitatif** (`"Expert"`, `"Avancé"`, `"Pratique"`, `"Notions"`), affiché en pastille. Un libellé inconnu est slugifié tel quel pour la classe CSS, avec `notions` en valeur par défaut — pas de pourcentage
+   - `skills[].items[].level` → niveau **qualitatif** (`"Expert"`, `"Avancé"`, `"Pratique"`, `"Notions"`), jamais un pourcentage. Le libellé est slugifié en classe CSS et mappé à une largeur de barre via `LEVEL_WIDTH` (`js/app.js`) — aucun chiffre n'est affiché à l'écran, le libellé reste lisible par les lecteurs d'écran (`.sr-only`)
    - `profile.roles` → titre affiché en rotation dans le hero
    - `profile.mobility` → ligne « lieu · mobilité » sous la photo + mention dans « Qui suis-je ? » (masquée si vide)
    - `profile.travel` → précisions sur les déplacements, ajoutées en fin de phrase dans « Qui suis-je ? » (ex. `avec possibilité de me déplacer occasionnellement au besoin`)
