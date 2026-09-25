@@ -157,7 +157,7 @@ function renderAbout(d) {
   const p = d.profile;
   const bio = qs("#aboutBio");
   const email = deobfuscateEmail(d.contact.email);
-  const blocks = toParagraphs(p.bio);
+  let blocks = toParagraphs(p.bio);
 
   if (p.location) {
     let place = "Je suis basé à <strong>" + escapeHtml(p.location) + "</strong>";
