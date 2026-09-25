@@ -202,24 +202,19 @@ function renderExperience(d) {
     .join("");
 }
 
-/* Transforme un libellé de niveau en classe CSS : "Avancé" → "avance". */
-function levelKey(label) {
-  return (
-    String(label || "")
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z]+/g, "-")
-      .replace(/^-+|-+$/g, "") || "notions"
-  );
-}
+/* Une compétence porte un pourcentage dans data.json (0-100) qui pilote
+   la largeur ET la couleur du remplissage. Le chiffre n'est jamais affiché :
+   haut = bleu, moyen = orange, bas = rouge. */
+const SKILL_BANDS = [
+  { min: 67, band: "haut" },
+  { min: 34, band: "moyen" },
+  { min: 0, band: "bas" }
+];
 
-/* Largeur de barre associée à un niveau qualitatif. purely d'affichage :
-   les données restent qualitatives dans data.json. */
-const LEVEL_WIDTH = { expert: 92, avance: 78, pratique: 60, notions: 35 };
-
-function levelWidth(label) {
-  return LEVEL_WIDTH[levelKey(label)] || 40;
+function skillLevel(pct) {
+  const v = Math.max(0, Math.min(100, Number(pct) || 0));
+  const hit = SKILL_BANDS.find((b) => v >= b.min) || SKILL_BANDS[SKILL_BANDS.length - 1];
+  return { value: v, band: hit.band };
 }
 
 function renderSkills(d) {
@@ -229,10 +224,11 @@ function renderSkills(d) {
       '<div class="skill-card"><h4><span class="skill-emoji">⚡</span>' + escapeHtml(cat.category) + "</h4>" +
       '<div class="skill-list">' +
       cat.items
-        .map((s) =>
-          '<span class="sk"><span class="sk-fill" data-level="' + levelWidth(s.level) + '"></span>' +
-          '<span class="sk-label">' + escapeHtml(s.name) + "</span></span>"
-        )
+        .map((s) => {
+          const lv = skillLevel(s.level);
+          return '<span class="sk"><span class="sk-fill ' + lv.band + '" data-level="' + lv.value + '"></span>' +
+            '<span class="sk-label">' + escapeHtml(s.name) + "</span></span>";
+        })
         .join("") +
       "</div></div>"
     )
@@ -422,11 +418,12 @@ function renderPrint(d) {
       (cat) =>
         '<div class="pcat"><div class="pcat-title">' + escapeHtml(cat.category) + "</div>" +
         cat.items
-          .map(
-            (s) =>
-              '<span class="pkw"><span class="pkw-fill" style="width:' + levelWidth(s.level) + '%"></span>' +
-              '<span class="pkw-label">' + escapeHtml(s.name) + "</span></span>"
-          )
+          .map((s) => {
+            const lv = skillLevel(s.level);
+            return '<span class="pkw"><span class="pkw-fill ' + lv.band +
+              '" style="width:' + lv.value + '%"></span>' +
+              '<span class="pkw-label">' + escapeHtml(s.name) + "</span></span>";
+          })
           .join("") +
         "</div>"
     )

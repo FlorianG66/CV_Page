@@ -59,51 +59,52 @@
     {
       "category": "IA générative & agentique",
       "items": [
-        { "name": "IA générative & prompt engineering", "level": "Expert" },
-        { "name": "LLM : GPT, Claude, Gemini, Copilot", "level": "Expert" },
-        { "name": "Agents IA via API OpenAI / REST", "level": "Avancé" },
-        { "name": "RAG & bases documentaires", "level": "Notions" }
+        { "name": "IA générative & prompt engineering", "level": 95 },
+        { "name": "LLM : GPT, Claude, Gemini, Mistral", "level": 95 },
+        { "name": "Agents IA via API OpenAI / REST", "level": 80 },
+        { "name": "RAG & bases documentaires", "level": 50 }
       ]
     },
     {
       "category": "Automatisation & intégration",
       "items": [
-        { "name": "Automatisation no-code (n8n, Make, Zapier)", "level": "Expert" },
-        { "name": "API REST & orchestration de workflows", "level": "Avancé" },
-        { "name": "Microsoft Power Automate", "level": "Avancé" }
+        { "name": "Automatisation no-code (n8n, Make, Zapier)", "level": 80 },
+        { "name": "API REST", "level": 50 },
+        { "name": "Orchestration de workflows", "level": 80 },
+        { "name": "Power Automate", "level": 65 }
       ]
     },
     {
       "category": "Cybersécurité & gouvernance",
       "items": [
-        { "name": "Cybersécurité & RGPD", "level": "Avancé" },
-        { "name": "Confidentialité des données", "level": "Avancé" }
+        { "name": "Cybersécurité & RGPD", "level": 70 },
+        { "name": "Confidentialité des données", "level": 80 }
       ]
     },
     {
       "category": "Cloud (en cours de formation)",
       "items": [
-        { "name": "Microsoft Azure", "level": "Notions" },
-        { "name": "Amazon Web Services (AWS)", "level": "Notions" },
-        { "name": "Google Cloud Platform", "level": "Notions" }
+        { "name": "Microsoft Azure", "level": 20 },
+        { "name": "Amazon Web Services (AWS)", "level": 20 },
+        { "name": "Google Cloud Platform", "level": 40 }
       ]
     },
     {
       "category": "Développement",
       "items": [
-        { "name": "Python", "level": "Avancé" },
-        { "name": "SQL (SQLite, MySQL)", "level": "Avancé" },
-        { "name": "Bash / Linux", "level": "Avancé" },
-        { "name": "Git / VS Code", "level": "Avancé" },
-        { "name": "HTML / CSS", "level": "Pratique" },
-        { "name": "C / Java", "level": "Pratique" }
+        { "name": "Python", "level": 90 },
+        { "name": "Bash / Linux", "level": 80 },
+        { "name": "HTML / CSS", "level": 85 },
+        { "name": "SQL (SQLite, MySQL)", "level": 85 },
+        { "name": "Git / VS Code", "level": 90 },
+        { "name": "C / Java", "level": 50 }
       ]
     },
     {
       "category": "Conseil & pédagogie",
       "items": [
-        { "name": "Conseil & accompagnement", "level": "Expert" },
-        { "name": "Pédagogie & formation", "level": "Expert" }
+        { "name": "Conseil & accompagnement", "level": 100 },
+        { "name": "Pédagogie & formation", "level": 80 }
       ]
     }
   ],
