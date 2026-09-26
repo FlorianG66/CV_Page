@@ -135,7 +135,7 @@
       "title": "Radar — Veille concurrentielle des prix",
       "category": "Data",
       "description": "Outil de surveillance des prix, de la disponibilité et des promotions chez les concurrents, pour aider les entreprises à piloter leur positionnement.",
-      "tags": ["Python", "FastAPI", "Next.js", "PostgreSQL", "Redis", "Playwright", "Docker", "Stripe"],
+      "tags": ["Python", "FastAPI", "Next.js", "PostgreSQL", "Stripe"],
       "link": "https://github.com/FlorianG66/Radar",
       "demo": "",
       "status": "En cours de développement",
