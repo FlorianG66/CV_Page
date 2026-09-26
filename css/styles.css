@@ -292,6 +292,16 @@ a { color: inherit; text-decoration: none; }
   vertical-align: middle;
 }
 
+/* Mission client : contenu confidentiel, identifiable sans les details internes. */
+.project-confidential {
+  display: inline-block; margin-left: 8px; padding: 3px 9px;
+  border: 1px solid var(--border); border-radius: 99px;
+  background: rgba(148, 163, 184, 0.12); color: var(--muted);
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.02em;
+  vertical-align: middle; text-transform: uppercase;
+}
+.pproj-conf { font-style: normal; color: var(--muted); font-weight: 600; }
+
 /* Mot-clé = pastille dont le remplissage coloré matérialise le niveau.
    Le libellé passe au-dessus du remplissage, aucun chiffre n'est affiché. */
 .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }

@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=9895eef4" />
+  <link rel="stylesheet" href="css/styles.css?v=55f5a6d5" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
 </head>
 <body>
@@ -30,20 +30,20 @@
         <span class="nav-logo-name" id="navName">Prénom NOM</span>
       </a>
       <nav class="nav-links" id="navLinks">
-        <a href="#apropos">À propos</a>
-        <a href="#experience">Expérience</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
-        <a href="#formation">Formation</a>
-        <a href="#contact">Contact</a>
+        <a href="#apropos" data-i18n="nav.apropos">À propos</a>
+        <a href="#experience" data-i18n="nav.experience">Expérience</a>
+        <a href="#competences" data-i18n="nav.competences">Compétences</a>
+        <a href="#projets" data-i18n="nav.projets">Projets</a>
+        <a href="#formation" data-i18n="nav.formation">Formation</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="nav-actions">
-        <button id="themeToggle" class="icon-btn" aria-label="Changer de thème" title="Changer de thème">
+        <button id="themeToggle" class="icon-btn" aria-label="Changer de thème" title="Changer de thème" data-i18n-attr="aria-label:nav.theme,title:nav.theme">
           <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg id="iconSun" class="hidden" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
-        <button id="pdfBtn" class="btn btn-ghost" title="Télécharger / imprimer en PDF">PDF</button>
-        <button id="burger" class="icon-btn burger" aria-label="Menu" title="Menu">
+        <button id="langBtn" class="btn btn-ghost" title="Voir la version anglaise" aria-label="Voir la version anglaise">EN</button>
+        <button id="burger" class="icon-btn burger" aria-label="Menu" title="Menu" data-i18n-attr="aria-label:nav.menu,title:nav.menu">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
@@ -56,13 +56,13 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-content">
-          <p class="hero-hello reveal">Bonjour, je suis <span class="dot">●</span></p>
+          <p class="hero-hello reveal"><span data-i18n="hero.hello">Bonjour, je suis</span> <span class="dot">●</span></p>
           <h1 class="hero-title reveal"><span id="heroName">Prénom NOM</span></h1>
           <h2 class="hero-role reveal"><span id="heroRole"></span><span class="cursor">|</span></h2>
           <p class="hero-tagline reveal" id="heroTagline"></p>
           <div class="hero-cta reveal">
-            <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-            <a href="#contact" class="btn btn-outline">Me contacter</a>
+            <a href="#projets" class="btn btn-primary" data-i18n="hero.projects">Voir mes projets</a>
+            <a href="#contact" class="btn btn-outline" data-i18n="hero.contact">Me contacter</a>
           </div>
           <div class="hero-socials reveal" id="heroSocials"></div>
         </div>
@@ -72,7 +72,7 @@
           </div>
           <div class="availability-chip">
             <span class="pulse"></span>
-            <span id="availabilityText">Disponible</span>
+            <span id="availabilityText" data-i18n="hero.available">Disponible</span>
           </div>
           <div class="meta-chip" id="mobilityChip" hidden></div>
         </div>
@@ -84,8 +84,8 @@
     <section id="apropos" class="section">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">À propos</span>
-          <h3 class="section-title">Qui suis-je&nbsp;?</h3>
+          <span class="section-label" data-i18n="about.label">À propos</span>
+          <h3 class="section-title" data-i18n="about.title">Qui suis-je&nbsp;?</h3>
         </div>
         <div class="about-grid reveal">
           <div class="card about-card">
@@ -103,8 +103,8 @@
     <section id="experience" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Parcours</span>
-          <h3 class="section-title">Expérience professionnelle</h3>
+          <span class="section-label" data-i18n="exp.label">Parcours</span>
+          <h3 class="section-title" data-i18n="exp.title">Expérience professionnelle</h3>
         </div>
         <div class="timeline" id="experienceList"></div>
       </div>
@@ -114,12 +114,12 @@
     <section id="competences" class="section">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Savoir-faire</span>
-          <h3 class="section-title">Compétences</h3>
+          <span class="section-label" data-i18n="skills.label">Savoir-faire</span>
+          <h3 class="section-title" data-i18n="skills.title">Compétences</h3>
         </div>
         <div class="skills-grid" id="skillsList"></div>
         <div class="languages reveal">
-          <h4 class="block-title">Langues</h4>
+          <h4 class="block-title" data-i18n="block.languages">Langues</h4>
           <div class="language-chips" id="languagesList"></div>
         </div>
       </div>
@@ -129,8 +129,8 @@
     <section id="projets" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Réalisations</span>
-          <h3 class="section-title">Projets</h3>
+          <span class="section-label" data-i18n="projects.label">Réalisations</span>
+          <h3 class="section-title" data-i18n="projects.title">Projets</h3>
         </div>
         <div class="filters reveal" id="projectFilters"></div>
         <div class="projects-grid" id="projectsList"></div>
@@ -141,16 +141,16 @@
     <section id="formation" class="section">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Cursus</span>
-          <h3 class="section-title">Formation</h3>
+          <span class="section-label" data-i18n="edu.label">Cursus</span>
+          <h3 class="section-title" data-i18n="edu.title">Formation</h3>
         </div>
         <div class="timeline timeline-edu" id="educationList"></div>
         <div class="languages reveal">
-          <h4 class="block-title">Formations professionnelles</h4>
+          <h4 class="block-title" data-i18n="block.trainings">Formations professionnelles</h4>
           <div class="language-chips" id="trainingList"></div>
         </div>
         <div class="interests reveal">
-          <h4 class="block-title">Centres d'intérêt</h4>
+          <h4 class="block-title" data-i18n="block.interests">Centres d'intérêt</h4>
           <div class="interest-chips" id="interestsList"></div>
         </div>
       </div>
@@ -160,8 +160,8 @@
     <section id="temoignages" class="section" style="display:none">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Recommandations</span>
-          <h3 class="section-title">Témoignages</h3>
+          <span class="section-label" data-i18n="testi.label">Recommandations</span>
+          <h3 class="section-title" data-i18n="testi.title">Témoignages</h3>
         </div>
         <div class="testimonials-grid" id="testimonialsList"></div>
       </div>
@@ -171,8 +171,8 @@
     <section id="contact" class="section section-alt">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-label">Contact</span>
-          <h3 class="section-title">Parlons de votre projet</h3>
+          <span class="section-label" data-i18n="contact.label">Contact</span>
+          <h3 class="section-title" data-i18n="contact.title">Parlons de votre projet</h3>
         </div>
         <div class="contact-grid" id="contactList"></div>
 
@@ -182,11 +182,11 @@
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://floriang66.github.io/CV_Page/#contact" />
-            <h4 class="block-title">Envoyez-moi un message</h4>
+            <h4 class="block-title" data-i18n="form.title">Envoyez-moi un message</h4>
             <div class="form-row">
               <div class="form-field">
-                <label for="fName">Nom</label>
-                <input type="text" id="fName" name="nom" placeholder="Votre nom" required />
+                <label for="fName" data-i18n="form.name">Nom</label>
+                <input type="text" id="fName" name="nom" placeholder="Votre nom" data-i18n-ph="form.name.ph" required />
               </div>
               <div class="form-field">
                 <label for="fEmail">Email</label>
@@ -194,14 +194,14 @@
               </div>
             </div>
             <div class="form-field">
-              <label for="fSubject">Sujet</label>
-              <input type="text" id="fSubject" name="sujet" placeholder="Objet de votre message" />
+              <label for="fSubject" data-i18n="form.subject">Sujet</label>
+              <input type="text" id="fSubject" name="sujet" placeholder="Objet de votre message" data-i18n-ph="form.subject.ph" />
             </div>
             <div class="form-field">
-              <label for="fMessage">Message</label>
-              <textarea id="fMessage" name="message" rows="5" placeholder="Votre message…" required></textarea>
+              <label for="fMessage" data-i18n="form.message">Message</label>
+              <textarea id="fMessage" name="message" rows="5" placeholder="Votre message…" required data-i18n-ph="form.message.ph"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            <button type="submit" class="btn btn-primary" data-i18n="form.submit">Envoyer le message</button>
             <p class="form-note" id="formNote" hidden></p>
           </form>
         </div>
@@ -215,12 +215,12 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p id="footerText"></p>
-      <button id="backTop" class="icon-btn" title="Revenir en haut" aria-label="Revenir en haut">
+      <button id="backTop" class="icon-btn" title="Revenir en haut" aria-label="Revenir en haut" data-i18n-attr="aria-label:footer.backTop,title:footer.backTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
       </button>
     </div>
   </footer>
 
-  <script src="js/app.js?v=9895eef4"></script>
+  <script src="js/app.js?v=55f5a6d5"></script>
 </body>
 </html>

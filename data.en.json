@@ -1,0 +1,324 @@
+{
+  "profile": {
+    "name": "Florian Guichard",
+    "initials": "FG",
+    "roles": ["Agentic AI & Automation Consultant", "Generative AI", "Process Automation"],
+    "tagline": "I design and deploy AI agents and automation workflows for SMEs, from use case discovery through to production.",
+    "bio": "Engineer with a Master's degree in computer science (IMERIR, cybersecurity track), I have specialised in generative AI and automation for the past 4 years. I now support SMEs on these topics, from the first conversation through to deployment.\n\nDay to day, I design AI agents (OpenAI/REST APIs) and no-code workflows (n8n, Make, Zapier, Power Automate) to connect their tools and take repetitive work off their hands.\n\nTrained in cybersecurity and attentive to GDPR requirements, I know how to make technical topics accessible for non-technical stakeholders. I am actively upskilling in cloud platforms (AWS, Azure, GCP) and in agentic architectures (RAG, multi-agent orchestration). Fluent English.",
+    "photo": "img/photo.jpg",
+    "location": "Perpignan (66), France",
+    "mobility": "Fully remote",
+    "travel": "with occasional travel when required",
+    "availability": "Open to opportunities",
+    "availabilityIcon": "✓",
+    "stats": [
+      { "value": "6+", "label": "Years of experience" },
+      { "value": "60+", "label": "SMEs supported" },
+      { "value": "5-7h", "label": "Saved per week on average" },
+      { "value": "3", "label": "Open-source projects" }
+    ]
+  },
+  "contact": {
+    "email": [107,113,116,119,110,102,115,51,108,122,110,104,109,102,119,105,59,59,69,108,114,102,110,113,51,104,116,114],
+    "phone": "06 11 65 65 73",
+    "github": "https://github.com/FlorianG66",
+    "linkedin": "https://www.linkedin.com/in/florian-guichard",
+    "website": "",
+    "cvPdf": ""
+  },
+  "search": {
+    "title": "What I'm looking for",
+    "text": "A role as an Agentic AI & Automation Consultant, where I can put to good use my experience in building AI agents, automating workflows and advising clients, while continuing to grow in cloud environments and in industrialising agentic AI solutions for production."
+  },
+  "experience": [
+    {
+      "period": "2022 — Present",
+      "role": "Digital Advisor",
+      "company": "CCI Pyrénées-Orientales",
+      "location": "Perpignan",
+      "description": "Design and development of AI agents (OpenAI/REST APIs) and no-code automation workflows (n8n, Make, Zapier, Power Automate) to connect information systems, business applications and repetitive tasks, for over 60 SMEs. Individual support to businesses in identifying generative AI and cybersecurity use cases, from scoping the need through to operational implementation. Design of teaching materials and delivery of many hands-on workshops on generative AI and automation, training non-technical audiences on their own business use cases.",
+      "tags": ["AI Agents", "OpenAI / REST API", "n8n / Make / Zapier", "Power Automate", "Cybersecurity", "Training"]
+    },
+    {
+      "period": "Sep. 2019 — Oct. 2021",
+      "role": "Apprentice IT Engineer",
+      "company": "CCI Pyrénées-Orientales",
+      "location": "Perpignan",
+      "description": "Development and maintenance of office and web solutions (Python, SQL, Bash), ensuring the reliability and efficiency of the internal information system. Creation of video content and teaching guides to strengthen digital communication and make digital tools easier to adopt.",
+      "tags": ["Python", "SQL", "Bash", "Linux", "Support"]
+    },
+    {
+      "period": "Feb. — Apr. 2019",
+      "role": "Software Developer Intern",
+      "company": "Sofareva (Linareva)",
+      "location": "Spain",
+      "description": "Optimisation of an e-commerce platform through the development of web features and the analysis of user data, improving overall conversion performance.",
+      "tags": ["Web development", "Data analysis", "E-commerce"]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Generative AI & agentic AI",
+      "items": [
+        { "name": "Generative AI & prompt engineering", "level": 95 },
+        { "name": "LLM: GPT, Claude, Gemini, Mistral", "level": 95 },
+        { "name": "AI agents via OpenAI / REST API", "level": 80 },
+        { "name": "RAG & document collections", "level": 70 }
+      ]
+    },
+    {
+      "category": "Automation & integration",
+      "items": [
+        { "name": "No-code automation (n8n, Make, Zapier)", "level": 80 },
+        { "name": "REST API", "level": 50 },
+        { "name": "Workflow orchestration", "level": 80 },
+        { "name": "Power Automate", "level": 65 }
+      ]
+    },
+    {
+      "category": "Cybersecurity & governance",
+      "items": [
+        { "name": "Cybersecurity & GDPR", "level": 70 },
+        { "name": "Data confidentiality", "level": 80 }
+      ]
+    },
+    {
+      "category": "Cloud (currently training)",
+      "items": [
+        { "name": "Microsoft Azure", "level": 40 },
+        { "name": "Amazon Web Services (AWS)", "level": 40 },
+        { "name": "Google Cloud Platform", "level": 55 }
+      ]
+    },
+    {
+      "category": "Development",
+      "items": [
+        { "name": "Python", "level": 90 },
+        { "name": "FastAPI", "level": 70 },
+        { "name": "Bash / Linux", "level": 80 },
+        { "name": "HTML / CSS", "level": 85 },
+        { "name": "SQL (SQLite, MySQL)", "level": 85 },
+        { "name": "Git / VS Code", "level": 90 },
+        { "name": "C / Java", "level": 50 }
+      ]
+    },
+    {
+      "category": "Consulting & teaching",
+      "items": [
+        { "name": "Consulting & support", "level": 100 },
+        { "name": "Teaching & training", "level": 80 }
+      ]
+    }
+  ],
+  "languages": [
+    { "name": "French", "level": "Native language" },
+    { "name": "English", "level": "Fluent (TOEIC 800)" },
+    { "name": "Spanish", "level": "Limited professional" },
+    { "name": "Japanese", "level": "Elementary (JLPT N5)" }
+  ],
+  "projects": [
+    {
+      "title": "AgentHub — Multi-agent AI SaaS platform",
+      "category": "AI & SaaS",
+      "description": "Multi-agent AI SaaS platform for SMEs: orchestrates AI agents to automate business tasks. Built with FastAPI and Next.js.",
+      "tags": ["FastAPI", "Next.js", "AI Agents", "SaaS"],
+      "link": "https://github.com/FlorianG66/AgentHub",
+      "demo": "",
+      "status": "Work in progress",
+      "detail": [
+        "AgentHub is a SaaS platform that lets SMEs create and orchestrate several AI agents: lead qualification, customer support, follow-up, document summarisation… Each agent is configurable, and an orchestration queue coordinates their execution according to business scenarios.",
+        "My role: multi-agent architecture design, implementation of the orchestration and workflows, and platform deployment. The code is developed with a vibe coding approach — I handle design, architecture and review, and rely on a coding agent to speed up implementation.",
+        "Stack: FastAPI (Python) on the back end, Next.js on the front end.",
+        "Work in progress, not finished: orchestration and the back-end API are functional, and the front end is already well advanced (dashboard, agent editing, multi-agent chat with memory, dark theme). The code is public on GitHub, so the implementation can be read rather than taken on trust."
+      ]
+    },
+    {
+      "title": "Radar — Competitive price monitoring",
+      "category": "Data",
+      "description": "Tool for monitoring competitors' prices, availability and promotions, helping businesses track their market positioning.",
+      "tags": ["Python", "FastAPI", "Next.js", "PostgreSQL", "Stripe"],
+      "link": "https://github.com/FlorianG66/Radar",
+      "demo": "",
+      "status": "Work in progress",
+      "detail": [
+        "Competitive intelligence SaaS: price, availability and promotion monitoring, change detection and email alerts.",
+        "Stack: FastAPI (SQLAlchemy 2, Alembic, Pydantic v2), Redis + RQ (async workers), Playwright (JS sites), PostgreSQL, Next.js 16 (App Router, TypeScript, Tailwind). Docker Compose + 121 pytest tests.",
+        "JWT authentication, CSV import/export, Stripe billing, administration. Developed with a vibe coding approach (design, architecture and review handled by me).",
+        "Work in progress, not finished — currently extending the coverage of scraping extractors."
+      ]
+    },
+    {
+      "title": "qraft — QR code generator with analytics",
+      "category": "Web",
+      "description": "Web platform for generating QR codes (URL or vCard) with user accounts, a personal library and scan analytics.",
+      "tags": ["Node.js", "JavaScript", "SQLite", "Security", "QR code"],
+      "link": "https://github.com/FlorianG66/qraft",
+      "demo": "",
+      "status": "Work in progress",
+      "detail": [
+        "qraft generates QR codes from a URL or a vCard 3.0, with live preview, colour customisation and PNG 1024 px or vector SVG export. Every saved QR code is linked to a tracking URL that records the scan before redirecting to the destination.",
+        "Scan analytics aggregate the number of scans, the trend over 30 days, the latest scan, the device type and the referrer domain, with aggregate reconciliation on startup and purging of raw events beyond 365 days.",
+        "Security: passwords hashed with scrypt and a random salt, HttpOnly/SameSite=Strict session cookies storing only the hash, CSRF tokens, prepared SQL queries, rate limiting, CSP and HSTS headers, and rejection of URLs containing credentials or pointing to private networks.",
+        "Written in JavaScript on Node.js 22 using the native node:sqlite module and with no npm dependencies, with an integration test suite that starts an isolated server on a temporary database.",
+        "Work in progress, not finished: the platform works locally but is not ready for public deployment. Still to do: email address verification, password reset, encrypted backups, rate limiting shared across instances, migration to PostgreSQL and moderation of destinations. Scan tracking also requires a public HTTPS origin to be configured."
+      ]
+    },
+    {
+      "title": "Custom AI agents for SMEs",
+      "category": "Client projects",
+      "description": "Design and deployment of AI agents (OpenAI API, orchestration) for specific business needs: lead qualification, follow-up, customer support, document summarisation.",
+      "tags": ["AI Agents", "OpenAI API", "Orchestration", "Python"],
+      "link": "",
+      "demo": "",
+      "confidential": true,
+      "detail": [
+        "Objective: automate a high-value, weakly structured business task, where a conventional script is not enough.",
+        "My role: scoping the need with the team, designing the agent and its orchestration, API calls, error and edge-case handling, then supporting the move into production.",
+        "Deliverable: an agent in production, documented and taken over by the client with no dependency on me.",
+        "Client and sector not named: details available in an interview."
+      ]
+    },
+    {
+      "title": "Business workflow automation",
+      "category": "Client projects",
+      "description": "Integration of no-code tools (n8n, Make, Zapier, Power Automate) and AI agents to automate key processes and remove repetitive tasks.",
+      "tags": ["n8n", "Make", "Zapier", "Power Automate", "REST API"],
+      "link": "",
+      "demo": "",
+      "confidential": true,
+      "detail": [
+        "Objective: reduce the time spent on repetitive tasks and make key business processes more reliable.",
+        "My role: process analysis, scenario design, implementation with no-code tools and AI agents, then training teams to use them.",
+        "Result: measurable time saved, documented and reproducible processes, and teams with new skills.",
+        "Client and sector not named: details available in an interview."
+      ]
+    },
+    {
+      "title": "Cybersecurity assessment and GDPR compliance",
+      "category": "Client projects",
+      "description": "Security posture assessment and GDPR compliance for SMEs: risk analysis, prioritised recommendations and team awareness.",
+      "tags": ["Cybersecurity", "GDPR", "Assessment", "Awareness"],
+      "link": "",
+      "demo": "",
+      "confidential": true,
+      "detail": [
+        "Objective: secure information systems and comply with GDPR in the face of cyber risks.",
+        "Approach: risk analysis, concrete recommendations (passwords, backups, updates, two-factor authentication), drawing up the record of processing activities and raising team awareness.",
+        "Result: an actionable roadmap, prioritised by level of risk.",
+        "Client and sector not named: details available in an interview."
+      ]
+    },
+    {
+      "title": "Generative AI training — 3 formats",
+      "category": "Client projects",
+      "description": "Introductory course, advanced workshop and conferences on generative AI for non-technical audiences: concepts, business use cases, ethical limits and live demonstrations.",
+      "tags": ["Generative AI", "Teaching", "Masterclass", "Workshop"],
+      "link": "",
+      "demo": "",
+      "confidential": true,
+      "detail": [
+        "Three levels: (1) the basics of AI with no technical prerequisites, (2) process automation with n8n, Make, Zapier and APIs, (3) masterclasses and in-person conferences on the issues and concrete use cases.",
+        "My role: designing the materials, delivering them, live demonstrations, guided exercises on real use cases, and discussion of limits, ethics and GDPR.",
+        "Format: small groups, adapted materials, each participant builds their own automations during the workshop.",
+        "Organisations not named: references available in an interview."
+      ]
+    },
+    {
+      "title": "E-commerce conversion optimisation",
+      "category": "Client projects",
+      "description": "Development of web features and analysis of user data (journeys, conversion rates, friction points) to improve conversion performance.",
+      "tags": ["Web development", "Analytics", "E-commerce"],
+      "link": "",
+      "demo": "",
+      "confidential": true,
+      "detail": [
+        "Objective: improve the conversion performance of an e-commerce platform.",
+        "Work: developed new web features and analysed user data to identify optimisation opportunities.",
+        "Method: data-driven iterations, measuring the impact of each change.",
+        "Client and sector not named: details available in an interview."
+      ]
+    },
+    {
+      "title": "Internal information system reliability",
+      "category": "Client projects",
+      "description": "Development and maintenance of office and web solutions (Python, SQL, Bash) to make the information system more reliable and reduce errors.",
+      "tags": ["Python", "SQL", "Bash", "Automation"],
+      "link": "",
+      "demo": "",
+      "confidential": true,
+      "detail": [
+        "Objective: make the internal information system more reliable and efficient on a daily basis.",
+        "My role: developing tools and scripts, automating office and web tasks, correcting data and documenting procedures.",
+        "Impact: fewer errors, less time lost, reliable data and better-equipped teams.",
+        "Client and sector not named: details available in an interview."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "2018 — 2021",
+      "degree": "MSc Engineering — Cybersecurity option",
+      "school": "IMERIR",
+      "place": "Perpignan",
+      "description": "Erasmus exchange at HAMK (Finland) in 2021. Specialised in cybersecurity and intelligent systems."
+    },
+    {
+      "period": "2016 — 2018",
+      "degree": "BTS Digital Systems — Electronics & Communication",
+      "school": "High school",
+      "place": "Perpignan",
+      "description": "Training in digital systems, electronics and telecommunications."
+    },
+    {
+      "period": "2012 — 2016",
+      "degree": "Scientific Baccalaureate — Engineering Science",
+      "school": "High school",
+      "place": "Perpignan",
+      "description": "Scientific baccalaureate, specialising in engineering science."
+    }
+  ],
+  "interests": [
+    {
+      "name": "Judo (black belt)",
+      "detail": "Judo taught me discipline, rigour and staying calm under pressure — qualities I bring to technical projects: keeping a cool head on a problem, progressing through iterations and respecting others."
+    },
+    {
+      "name": "Basketball",
+      "detail": "A team sport that taught me to communicate, to position myself and above all to trust others: the team before individuals."
+    },
+    {
+      "name": "Weight training",
+      "detail": "Regular training for perseverance and consistency: results come from repetition and constancy, a principle I also apply to technical learning."
+    },
+    {
+      "name": "Japanese culture",
+      "detail": "A fascination with precision, craftsmanship and Japanese aesthetics, which also led me to learn the language (JLPT N5) and discover the country."
+    },
+    {
+      "name": "Travel in Asia",
+      "detail": "Discovering other cultures, adapting to the unexpected and observing how technologies integrate differently depending on the country and the uses."
+    }
+  ],
+  "trainings": [
+    {
+      "name": "Core Python Programming",
+      "org": "École 42 Perpignan",
+      "year": "2026",
+      "detail": "Refresher and validation of Python fundamentals (syntax, data structures, object-oriented programming, best practices and practical projects)."
+    },
+    {
+      "name": "Public speaking",
+      "org": "Mon entreprise est une scène",
+      "year": "2025",
+      "detail": "Oral expression techniques, storytelling, stress management and facilitation posture, directly applied to running workshops and conferences."
+    },
+    {
+      "name": "Digital service eco-design",
+      "org": "GreenIT",
+      "year": "2023",
+      "detail": "GreenIT method best practices for designing sober and sustainable digital services: environmental impacts, measurement and optimisation."
+    }
+  ],
+  "testimonials": [],
+  "footer": "© 2026 Florian Guichard — CV built with HTML, CSS & JavaScript"
+}

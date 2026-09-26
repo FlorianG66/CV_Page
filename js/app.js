@@ -4,6 +4,153 @@
    un jeu de données par défaut est utilisé.
    ========================================================= */
 
+/* ---------- Internationalisation FR / EN ---------- */
+
+const I18N = {
+  fr: {
+    "nav.apropos": "À propos",
+    "nav.experience": "Expérience",
+    "nav.competences": "Compétences",
+    "nav.projets": "Projets",
+    "nav.formation": "Formation",
+    "nav.contact": "Contact",
+    "nav.theme": "Changer de thème",
+    "nav.menu": "Menu",
+    "nav.lang": "Voir la version anglaise",
+    "hero.hello": "Bonjour, je suis",
+    "hero.projects": "Voir mes projets",
+    "hero.contact": "Me contacter",
+    "hero.available": "Disponible",
+    "about.label": "À propos",
+    "about.title": "Qui suis-je ?",
+    "exp.label": "Parcours",
+    "exp.title": "Expérience professionnelle",
+    "skills.label": "Savoir-faire",
+    "skills.title": "Compétences",
+    "projects.label": "Réalisations",
+    "projects.title": "Projets",
+    "edu.label": "Cursus",
+    "edu.title": "Formation",
+    "testi.label": "Recommandations",
+    "testi.title": "Témoignages",
+    "contact.label": "Contact",
+    "contact.title": "Parlons de votre projet",
+    "block.languages": "Langues",
+    "block.trainings": "Formations professionnelles",
+    "block.interests": "Centres d'intérêt",
+    "form.title": "Envoyez-moi un message",
+    "form.name": "Nom",
+    "form.name.ph": "Votre nom",
+    "form.email": "Email",
+    "form.subject": "Sujet",
+    "form.subject.ph": "Objet de votre message",
+    "form.message": "Message",
+    "form.message.ph": "Votre message…",
+    "form.submit": "Envoyer le message",
+    "form.sending": "Envoi en cours…",
+    "form.sendingNote": "Envoi de votre message…",
+    "form.ok": "Message envoyé, merci ! Je vous réponds rapidement.",
+    "form.err": "L'envoi a échoué. Écrivez-moi directement par email.",
+    "footer.backTop": "Revenir en haut",
+    "ui.more": "En savoir plus",
+    "ui.details": "Détails du projet",
+    "ui.code": "Voir le code ↗",
+    "ui.demo": "Démo ↗",
+    "ui.phone": "Téléphone",
+    "ui.searchTitle": "Ce que je recherche",
+    "ui.filterAll": "Tout",
+    "ui.confidential": "Confidentiel",
+    "print.profile": "Profil",
+    "print.contact": "Contact",
+    "print.skills": "Compétences",
+    "print.languages": "Langues",
+    "print.interests": "Centres d'intérêt",
+    "print.experience": "Expérience professionnelle",
+    "print.education": "Formation",
+    "print.projects": "Projets",
+    "about.basedIn": "Je suis basé à",
+    "about.availableIn": "disponible en",
+    "about.reachMe": "Vous pouvez me joindre à"
+  },
+  en: {
+    "nav.apropos": "About",
+    "nav.experience": "Experience",
+    "nav.competences": "Skills",
+    "nav.projets": "Projects",
+    "nav.formation": "Education",
+    "nav.contact": "Contact",
+    "nav.theme": "Toggle theme",
+    "nav.menu": "Menu",
+    "nav.lang": "View the French version",
+    "hero.hello": "Hi, I'm",
+    "hero.projects": "View my projects",
+    "hero.contact": "Contact me",
+    "hero.available": "Available",
+    "about.label": "About",
+    "about.title": "Who am I?",
+    "exp.label": "Career path",
+    "exp.title": "Professional experience",
+    "skills.label": "Expertise",
+    "skills.title": "Skills",
+    "projects.label": "Projects",
+    "projects.title": "Projects",
+    "edu.label": "Education",
+    "edu.title": "Education",
+    "testi.label": "Testimonials",
+    "testi.title": "Testimonials",
+    "contact.label": "Contact",
+    "contact.title": "Let's talk about your project",
+    "block.languages": "Languages",
+    "block.trainings": "Professional training",
+    "block.interests": "Interests",
+    "form.title": "Send me a message",
+    "form.name": "Name",
+    "form.name.ph": "Your name",
+    "form.email": "Email",
+    "form.subject": "Subject",
+    "form.subject.ph": "Message subject",
+    "form.message": "Message",
+    "form.message.ph": "Your message…",
+    "form.submit": "Send message",
+    "form.sending": "Sending…",
+    "form.sendingNote": "Sending your message…",
+    "form.ok": "Message sent, thank you! I'll get back to you shortly.",
+    "form.err": "Sending failed. Please email me directly.",
+    "footer.backTop": "Back to top",
+    "ui.more": "Learn more",
+    "ui.details": "Project details",
+    "ui.code": "View code ↗",
+    "ui.demo": "Demo ↗",
+    "ui.phone": "Phone",
+    "ui.searchTitle": "What I'm looking for",
+    "ui.filterAll": "All",
+    "ui.confidential": "Confidential",
+    "print.profile": "Profile",
+    "print.contact": "Contact",
+    "print.skills": "Skills",
+    "print.languages": "Languages",
+    "print.interests": "Interests",
+    "print.experience": "Professional experience",
+    "print.education": "Education",
+    "print.projects": "Projects",
+    "about.basedIn": "I am based in",
+    "about.availableIn": "available for",
+    "about.reachMe": "You can reach me at"
+  }
+};
+
+let LANG = "fr";
+
+function t(key) {
+  const dict = I18N[LANG] || I18N.fr;
+  if (dict[key] != null) return dict[key];
+  return I18N.fr[key] != null ? I18N.fr[key] : key;
+}
+
+function confidentialLabel() {
+  return t("ui.confidential");
+}
+
 const DEFAULT_DATA = {
   profile: {
     name: "Prénom NOM",
@@ -160,14 +307,14 @@ function renderAbout(d) {
   let blocks = toParagraphs(p.bio);
 
   if (p.location) {
-    let place = "Je suis basé à <strong>" + escapeHtml(p.location) + "</strong>";
-    if (p.mobility) place += ", disponible en <strong>" + escapeHtml(String(p.mobility).toLowerCase()) + "</strong>";
+    let place = t("about.basedIn") + " <strong>" + escapeHtml(p.location) + "</strong>";
+    if (p.mobility) place += ", " + t("about.availableIn") + " <strong>" + escapeHtml(String(p.mobility).toLowerCase()) + "</strong>";
     if (p.travel) place += ", " + escapeHtml(p.travel);
     blocks += "<p>" + place + ".</p>";
   }
   if (email) {
     blocks +=
-      '<p>Vous pouvez me joindre à <a href="mailto:' + email +
+      "<p>" + t("about.reachMe") + ' <a href="mailto:' + email +
       '" style="color:var(--accent-2)">' + escapeHtml(email) + "</a>.</p>";
   }
   bio.innerHTML = blocks;
@@ -182,7 +329,7 @@ function renderSearch(d) {
     return;
   }
   card.hidden = false;
-  setText("searchTitle", s.title || "Ce que je recherche");
+  setText("searchTitle", s.title || t("ui.searchTitle"));
   setText("searchText", s.text);
 }
 
@@ -272,34 +419,38 @@ function renderProjects(d) {
   const filtersBox = qs("#projectFilters");
   const projects = d.projects || [];
 
-  const cats = ["Tout", ...new Set(projects.map((p) => p.category).filter(Boolean))];
+  const ALL_CATS = "*";
+  const cats = [{ key: ALL_CATS, label: t("ui.filterAll") }]
+    .concat([...new Set(projects.map((p) => p.category).filter(Boolean))]
+      .map((c) => ({ key: c, label: c })));
   filtersBox.innerHTML = cats
-    .map((c, i) => '<button class="filter-btn' + (i === 0 ? " active" : "") + '" data-filter="' + c + '">' + c + "</button>")
+    .map((c, i) => '<button class="filter-btn' + (i === 0 ? " active" : "") + '" data-filter="' + c.key + '">' + escapeHtml(c.label) + "</button>")
     .join("");
 
-  function inject(cat) {
-    const filtered = cat === "Tout" ? projects : projects.filter((p) => p.category === cat);
+  function inject(key) {
+    const filtered = key === ALL_CATS ? projects : projects.filter((p) => p.category === key);
     list.innerHTML = filtered
       .map((p) =>
         '<article class="project-card"><span class="project-cat">' + escapeHtml(p.category) + "</span>" +
         (p.status ? '<span class="project-status">' + escapeHtml(p.status) + "</span>" : "") +
+        (p.confidential ? '<span class="project-confidential">' + escapeHtml(confidentialLabel()) + "</span>" : "") +
         '<h4 class="project-title">' + escapeHtml(p.title) + "</h4>" +
         '<p class="project-desc">' + escapeHtml(p.description) + "</p>" +
-        '<div class="project-tags">' + (p.tags || []).map((t) =>
-          '<span class="tag">' + escapeHtml(t) + "</span>").join("") + "</div>" +
+        '<div class="project-tags">' + (p.tags || []).map((tag) =>
+          '<span class="tag">' + escapeHtml(tag) + "</span>").join("") + "</div>" +
         (p.detail && p.detail.length
-          ? '<details class="project-detail"><summary>' + (p.link || p.demo ? "En savoir plus" : "Détails du projet") + "</summary>" +
+          ? '<details class="project-detail"><summary>' + (p.link || p.demo ? t("ui.more") : t("ui.details")) + "</summary>" +
             p.detail.map((d) => "<p>" + escapeHtml(d) + "</p>").join("") + "</details>"
           : "") +
         '<div class="project-links">' +
-        (p.link ? '<a href="' + p.link + '" target="_blank" rel="noopener">Voir le code ↗</a>' : "") +
-        (p.demo ? '<a href="' + p.demo + '" target="_blank" rel="noopener">Démo ↗</a>' : "") +
+        (p.link ? '<a href="' + p.link + '" target="_blank" rel="noopener">' + t("ui.code") + "</a>" : "") +
+        (p.demo ? '<a href="' + p.demo + '" target="_blank" rel="noopener">' + t("ui.demo") + "</a>" : "") +
         "</div></article>"
       )
       .join("");
   }
 
-  inject("Tout");
+  inject(ALL_CATS);
 
   qsa(".filter-btn", filtersBox).forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -328,7 +479,7 @@ function renderContact(d) {
   const email = deobfuscateEmail(c.email);
   const items = [
     { icon: ICONS.email, label: "Email", value: email, href: "mailto:" + email },
-    { icon: ICONS.phone, label: "Téléphone", value: c.phone, href: "tel:" + c.phone.replace(/\s/g, "") },
+    { icon: ICONS.phone, label: t("ui.phone"), value: c.phone, href: "tel:" + c.phone.replace(/\s/g, "") },
     { icon: ICONS.github, label: "GitHub", value: cleanDomain(c.github), href: c.github },
     { icon: ICONS.linkedin, label: "LinkedIn", value: cleanDomain(c.linkedin), href: c.linkedin }
   ].filter((i) => i.value);
@@ -454,12 +605,13 @@ function renderPrint(d) {
       (pr) =>
         '<span class="pproj"><span class="pproj-title">' + escapeHtml(pr.title) +
         (pr.status ? ' <em class="pproj-wip">' + escapeHtml(pr.status) + "</em>" : "") +
+        (pr.confidential ? ' <em class="pproj-conf">' + escapeHtml(confidentialLabel()) + "</em>" : "") +
         '</span><small>' + escapeHtml(pr.category) + "</small></span>"
     )
     .join("");
 
   const search = d.search && d.search.text
-    ? '<section class="pbox"><h2>' + escapeHtml(d.search.title || "Ce que je recherche") +
+    ? '<section class="pbox"><h2>' + escapeHtml(d.search.title || t("ui.searchTitle")) +
       '</h2><p class="psearch">' + escapeHtml(d.search.text) + "</p></section>"
     : "";
 
@@ -479,30 +631,30 @@ function renderPrint(d) {
     '<aside class="paside">' +
 
     (p.bio
-      ? '<section class="pbox"><h2>Profil</h2><div class="pprofil">' + toParagraphs(p.bio) + "</div></section>"
+      ? '<section class="pbox"><h2>' + t("print.profile") + '</h2><div class="pprofil">' + toParagraphs(p.bio) + "</div></section>"
       : "") +
 
-    '<section class="pbox"><h2>Contact</h2><ul class="pcontact">' +
+    '<section class="pbox"><h2>' + t("print.contact") + '</h2><ul class="pcontact">' +
     contactItems.map((i) => "<li><em>" + i.tag + "</em> " + escapeHtml(i.text) + "</li>").join("") +
     "</ul></section>" +
 
-    '<section class="pbox"><h2>Compétences</h2>' + skills + "</section>" +
+    '<section class="pbox"><h2>' + t("print.skills") + "</h2>" + skills + "</section>" +
 
-    (languages ? '<section class="pbox"><h2>Langues</h2><ul class="plangs">' + languages + "</ul></section>" : "") +
+    (languages ? '<section class="pbox"><h2>' + t("print.languages") + '</h2><ul class="plangs">' + languages + "</ul></section>" : "") +
 
-    (interests ? '<section class="pbox"><h2>Centres d\'intérêt</h2><div class="pinterests">' + interests + "</div></section>" : "") +
+    (interests ? '<section class="pbox"><h2>' + t("print.interests") + '</h2><div class="pinterests">' + interests + "</div></section>" : "") +
 
     "</aside>" +
 
     '<section class="pmain">' +
 
-    (experience ? '<section class="pbox"><h2>Expérience professionnelle</h2>' + experience + "</section>" : "") +
+    (experience ? '<section class="pbox"><h2>' + t("print.experience") + "</h2>" + experience + "</section>" : "") +
 
     search +
 
-    (education ? '<section class="pbox"><h2>Formation</h2>' + education + "</section>" : "") +
+    (education ? '<section class="pbox"><h2>' + t("print.education") + "</h2>" + education + "</section>" : "") +
 
-    (projects ? '<section class="pbox"><h2>Projets</h2><div class="pprojects">' + projects + "</div></section>" : "") +
+    (projects ? '<section class="pbox"><h2>' + t("print.projects") + '</h2><div class="pprojects">' + projects + "</div></section>" : "") +
 
     "</section></div>" +
 
@@ -542,13 +694,15 @@ function setupSkillsAnimation() {
   document.querySelectorAll(".sk-fill").forEach((el) => io.observe(el));
 }
 
+let roleTimer = null;
+
 function setupRoleRotator(roles) {
   const el = qs("#heroRole");
   let i = 0;
   (function tick() {
     el.textContent = roles[i % roles.length];
     i++;
-    setTimeout(tick, 2600);
+    roleTimer = setTimeout(tick, 2600);
   })();
 }
 
@@ -600,10 +754,6 @@ function setupNav() {
   qs("#backTop").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 }
 
-function setupPdf() {
-  qs("#pdfBtn").addEventListener("click", () => window.print());
-}
-
 function setupContactForm() {
   const form = qs("#contactForm");
   if (!form) return;
@@ -614,10 +764,10 @@ function setupContactForm() {
     const btn = form.querySelector("button[type=submit]");
     const data = Object.fromEntries(new FormData(form).entries());
     btn.disabled = true;
-    btn.textContent = "Envoi en cours…";
+    btn.textContent = t("form.sending");
     note.hidden = false;
     note.className = "form-note";
-    note.textContent = "Envoi de votre message…";
+    note.textContent = t("form.sendingNote");
     try {
       const res = await fetch("https://formsubmit.co/ajax/" + CONTACT_EMAIL, {
         method: "POST",
@@ -628,41 +778,42 @@ function setupContactForm() {
       if (res.ok && json.success) {
         form.reset();
         note.classList.remove("error");
-        note.textContent = "Merci, votre message a bien été envoyé ! Je vous répondrai rapidement.";
+        note.textContent = t("form.ok");
       } else {
         note.classList.add("error");
-        note.textContent = "Une erreur est survenue : " + (json.message || "réessayez plus tard.") +
-          " Vous pouvez aussi m'écrire directement à l'adresse de contact du site.";
+        note.textContent = t("form.err") + " " + (json.message || "");
       }
     } catch (err) {
       note.classList.add("error");
-      note.textContent = "Impossible d'envoyer pour l'instant. Écrivez-moi via l'adresse de contact du site ou réessayez.";
+      note.textContent = t("form.err");
     } finally {
       btn.disabled = false;
-      btn.textContent = "Envoyer le message";
+      btn.textContent = t("form.submit");
     }
   });
 }
 
 /* ---------- Chargement des données ---------- */
 
+const DATA_FILE = { fr: "data.json", en: "data.en.json" };
+
 async function loadData() {
+  const file = DATA_FILE[LANG] || DATA_FILE.fr;
   try {
-    const res = await fetch("data.json", { cache: "no-store" });
+    const res = await fetch(file, { cache: "no-store" });
     if (!res.ok) throw new Error("status " + res.status);
     const remote = await res.json();
     return deepMerge(DEFAULT_DATA, remote);
   } catch (err) {
-    console.warn("data.json introuvable, utilisation des données par défaut :", err);
+    console.warn(file + " introuvable, utilisation des données par défaut :", err);
     return DEFAULT_DATA;
   }
 }
 
-(async function init() {
-  const data = await loadData();
-
+function renderAll(data) {
   CONTACT_EMAIL = deobfuscateEmail(data.contact.email);
 
+  applyI18n();
   renderHero(data);
   renderAbout(data);
   renderSearch(data);
@@ -679,10 +830,66 @@ async function loadData() {
   renderPrint(data);
 
   setupRoleRotator(data.profile.roles);
+  setupSkillsAnimation();
+}
+
+function applyI18n() {
+  document.documentElement.lang = LANG;
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    el.textContent = t(el.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach((el) => {
+    el.placeholder = t(el.dataset.i18nPh);
+  });
+  document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
+    el.dataset.i18nAttr.split(",").forEach((pair) => {
+      const [attr, key] = pair.split(":").map((s) => s.trim());
+      el.setAttribute(attr, t(key));
+    });
+  });
+  const btn = qs("#langBtn");
+  if (btn) {
+    btn.textContent = LANG === "fr" ? "EN" : "FR";
+    btn.setAttribute("title", t("nav.lang"));
+    btn.setAttribute("aria-label", t("nav.lang"));
+  }
+}
+
+function detectLang() {
+  const q = new URLSearchParams(location.search).get("lang");
+  if (q === "en" || q === "fr") return q;
+  const stored = localStorage.getItem("cv-lang");
+  if (stored === "en" || stored === "fr") return stored;
+  return "fr";
+}
+
+function setupLang() {
+  qs("#langBtn").addEventListener("click", async () => {
+    const next = LANG === "fr" ? "en" : "fr";
+    localStorage.setItem("cv-lang", next);
+    const url = new URL(location.href);
+    url.searchParams.set("lang", next);
+    history.replaceState(null, "", url);
+    LANG = next;
+    stopRoleRotator();
+    renderAll(await loadData());
+  });
+}
+
+function stopRoleRotator() {
+  if (roleTimer) {
+    clearTimeout(roleTimer);
+    roleTimer = null;
+  }
+}
+
+(async function init() {
+  LANG = detectLang();
+  renderAll(await loadData());
+
   setupTheme();
   setupNav();
-  setupPdf();
   setupContactForm();
   setupReveal();
-  setupSkillsAnimation();
+  setupLang();
 })();
