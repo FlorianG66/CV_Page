@@ -206,16 +206,16 @@
       ]
     },
     {
-      "title": "Formation IA générative — 3 formats",
+      "title": "Masterclass IAG",
       "category": "Missions clients",
-      "description": "Initiation, atelier avancé et conférences sur l'IA générative, pour des publics non techniques : concepts, usages métiers, limites éthiques et démonstrations en direct.",
-      "tags": ["IA générative", "Pédagogie", "Masterclass", "Atelier pratique"],
+      "description": "Conférences en présentiel sur l'IA générative : enjeux, usages concrets, démonstrations en direct et échanges avec le public.",
+      "tags": ["IA générative", "Masterclass", "Conférence", "Présentiel"],
       "link": "",
       "demo": "",
       "detail": [
-        "Trois formats : (1) les bases de l'IA sans prérequis technique, (2) l'automatisation de processus avec n8n, Make, Zapier et les API, (3) masterclass et conférences en présentiel sur les enjeux et les usages concrets.",
-        "Mon rôle : conception des supports, animation, démonstrations en direct, exercices guidés sur des cas d'usage réels et échanges sur les limites, l'éthique et le RGPD.",
-        "Format : petits groupes, supports adaptés, chaque participant construit ses propres automatisations en atelier.",
+        "Animation de masterclass et de conférences en présentiel devant des publics professionnels, sur les enjeux de l'IA et ses usages réels.",
+        "Mon rôle : conception des supports, animation, démonstrations en direct et échanges avec le public.",
+        "Format : présentiel, temps d'échange et/questions en fin de session.",
         "Organisations non mentionnées : les références sont disponibles en entretien."
       ]
     },
