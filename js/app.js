@@ -59,7 +59,6 @@ const I18N = {
     "ui.phone": "Téléphone",
     "ui.searchTitle": "Ce que je recherche",
     "ui.filterAll": "Tout",
-    "ui.confidential": "Confidentiel",
     "print.profile": "Profil",
     "print.contact": "Contact",
     "print.skills": "Compétences",
@@ -124,7 +123,6 @@ const I18N = {
     "ui.phone": "Phone",
     "ui.searchTitle": "What I'm looking for",
     "ui.filterAll": "All",
-    "ui.confidential": "Confidential",
     "print.profile": "Profile",
     "print.contact": "Contact",
     "print.skills": "Skills",
@@ -145,10 +143,6 @@ function t(key) {
   const dict = I18N[LANG] || I18N.fr;
   if (dict[key] != null) return dict[key];
   return I18N.fr[key] != null ? I18N.fr[key] : key;
-}
-
-function confidentialLabel() {
-  return t("ui.confidential");
 }
 
 const DEFAULT_DATA = {
@@ -433,7 +427,6 @@ function renderProjects(d) {
       .map((p) =>
         '<article class="project-card"><span class="project-cat">' + escapeHtml(p.category) + "</span>" +
         (p.status ? '<span class="project-status">' + escapeHtml(p.status) + "</span>" : "") +
-        (p.confidential ? '<span class="project-confidential">' + escapeHtml(confidentialLabel()) + "</span>" : "") +
         '<h4 class="project-title">' + escapeHtml(p.title) + "</h4>" +
         '<p class="project-desc">' + escapeHtml(p.description) + "</p>" +
         '<div class="project-tags">' + (p.tags || []).map((tag) =>
@@ -605,7 +598,6 @@ function renderPrint(d) {
       (pr) =>
         '<span class="pproj"><span class="pproj-title">' + escapeHtml(pr.title) +
         (pr.status ? ' <em class="pproj-wip">' + escapeHtml(pr.status) + "</em>" : "") +
-        (pr.confidential ? ' <em class="pproj-conf">' + escapeHtml(confidentialLabel()) + "</em>" : "") +
         '</span><small>' + escapeHtml(pr.category) + "</small></span>"
     )
     .join("");

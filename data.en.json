@@ -170,7 +170,6 @@
       "tags": ["AI Agents", "OpenAI API", "Orchestration", "Python"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objective: automate a high-value, weakly structured business task, where a conventional script is not enough.",
         "My role: scoping the need with the team, designing the agent and its orchestration, API calls, error and edge-case handling, then supporting the move into production.",
@@ -185,7 +184,6 @@
       "tags": ["n8n", "Make", "Zapier", "Power Automate", "REST API"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objective: reduce the time spent on repetitive tasks and make key business processes more reliable.",
         "My role: process analysis, scenario design, implementation with no-code tools and AI agents, then training teams to use them.",
@@ -200,7 +198,6 @@
       "tags": ["Cybersecurity", "GDPR", "Assessment", "Awareness"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objective: secure information systems and comply with GDPR in the face of cyber risks.",
         "Approach: risk analysis, concrete recommendations (passwords, backups, updates, two-factor authentication), drawing up the record of processing activities and raising team awareness.",
@@ -215,12 +212,37 @@
       "tags": ["Generative AI", "Teaching", "Masterclass", "Workshop"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
-        "Three levels: (1) the basics of AI with no technical prerequisites, (2) process automation with n8n, Make, Zapier and APIs, (3) masterclasses and in-person conferences on the issues and concrete use cases.",
+        "Three formats: (1) the basics of AI with no technical prerequisites, (2) process automation with n8n, Make, Zapier and APIs, (3) masterclasses and in-person conferences on the issues and concrete use cases.",
         "My role: designing the materials, delivering them, live demonstrations, guided exercises on real use cases, and discussion of limits, ethics and GDPR.",
         "Format: small groups, adapted materials, each participant builds their own automations during the workshop.",
         "Organisations not named: references available in an interview."
+      ]
+    },
+    {
+      "title": "AI training — Level 1: the basics of AI",
+      "category": "Client projects",
+      "description": "Introduction to the fundamentals of AI for non-technical audiences: how models work, business use cases, ethical limits and demonstrations of generative AI tools.",
+      "tags": ["AI", "GPT", "Teaching"],
+      "link": "",
+      "demo": "",
+      "detail": [
+        "Objective: convey the fundamentals of AI (how models work, business use cases, ethical limits) with no technical prerequisites.",
+        "Content: presentation of key concepts, live demonstrations of generative AI, time for discussion and exercises applied to concrete cases.",
+        "Audience: non-technical professionals (managers, executives, business teams)."
+      ]
+    },
+    {
+      "title": "AI training — Level 2: process automation",
+      "category": "Client projects",
+      "description": "Advanced workshop on automating business processes with no-code tools and AI agents (n8n, Make, Zapier, OpenAI API).",
+      "tags": ["Automation", "n8n", "AI Agents"],
+      "link": "",
+      "demo": "",
+      "detail": [
+        "Objective: scale up business process automation using no-code tools and AI agents.",
+        "Programme: getting to grips with n8n, Make and Zapier, building AI agents via API (OpenAI, REST), and setting up complete orchestration scenarios.",
+        "Method: hands-on workshop where each participant builds their own automations."
       ]
     },
     {
@@ -230,7 +252,6 @@
       "tags": ["Web development", "Analytics", "E-commerce"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objective: improve the conversion performance of an e-commerce platform.",
         "Work: developed new web features and analysed user data to identify optimisation opportunities.",
@@ -245,7 +266,6 @@
       "tags": ["Python", "SQL", "Bash", "Automation"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objective: make the internal information system more reliable and efficient on a daily basis.",
         "My role: developing tools and scripts, automating office and web tasks, correcting data and documenting procedures.",

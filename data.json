@@ -170,7 +170,6 @@
       "tags": ["Agents IA", "API OpenAI", "Orchestration", "Python"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objectif : automatiser une tâche métier à forte valeur et faible structuration, là où un script classique ne suffit pas.",
         "Mon rôle : cadrage du besoin avec l'équipe, conception de l'agent et de son orchestration, appel à l'API, gestion des erreurs et des cas limites, puis accompagnement à la mise en production.",
@@ -185,7 +184,6 @@
       "tags": ["n8n", "Make", "Zapier", "Power Automate", "API REST"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objectif : réduire le temps consacré aux tâches répétitives et fiabiliser les processus clés d'une organisation.",
         "Mon rôle : analyse des processus, conception du scénario, mise en place des outils et des agents IA, puis formation des équipes à la prise en main.",
@@ -200,7 +198,6 @@
       "tags": ["Cybersécurité", "RGPD", "Diagnostic", "Sensibilisation"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objectif : sécuriser les systèmes d'information et se conformer au RGPD face aux risques cyber.",
         "Démarche : analyse des risques, préconisations concrètes (mots de passe, sauvegardes, mises à jour, double authentification), constitution du registre des traitements et sensibilisation des équipes.",
@@ -215,12 +212,37 @@
       "tags": ["IA générative", "Pédagogie", "Masterclass", "Atelier pratique"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
-        "Trois niveaux : (1) les bases de l'IA sans prérequis technique, (2) l'automatisation de processus avec n8n, Make, Zapier et les API, (3) masterclass et conférences en présentiel sur les enjeux et les usages concrets.",
+        "Trois formats : (1) les bases de l'IA sans prérequis technique, (2) l'automatisation de processus avec n8n, Make, Zapier et les API, (3) masterclass et conférences en présentiel sur les enjeux et les usages concrets.",
         "Mon rôle : conception des supports, animation, démonstrations en direct, exercices guidés sur des cas d'usage réels et échanges sur les limites, l'éthique et le RGPD.",
         "Format : petits groupes, supports adaptés, chaque participant construit ses propres automatisations en atelier.",
         "Organisations non mentionnées : les références sont disponibles en entretien."
+      ]
+    },
+    {
+      "title": "Formation IA — Niveau 1 : les bases de l'IA",
+      "category": "Missions clients",
+      "description": "Initiation aux fondamentaux de l'IA pour des publics non techniques : fonctionnement des modèles, cas d'usage métiers, limites éthiques et démo d'outils d'IA générative.",
+      "tags": ["IA", "GPT", "Pédagogie"],
+      "link": "",
+      "demo": "",
+      "detail": [
+        "Objectif : transmettre les fondamentaux de l'IA (fonctionnement des modèles, cas d'usage métiers, limites éthiques) sans prérequis technique.",
+        "Déroulé : présentation des concepts clés, démonstrations en direct de l'IA générative, temps d'échanges et exercices d'application sur des cas concrets.",
+        "Public : professionnels non techniques (dirigeants, managers, équipes métiers)."
+      ]
+    },
+    {
+      "title": "Formation IA — Niveau 2 : automatisation de processus",
+      "category": "Missions clients",
+      "description": "Atelier avancé sur l'automatisation des processus métiers avec des outils no-code et des agents IA (n8n, Make, Zapier, API OpenAI).",
+      "tags": ["Automatisation", "n8n", "Agents IA"],
+      "link": "",
+      "demo": "",
+      "detail": [
+        "Objectif : passer à l'échelle avec l'automatisation de processus métiers à l'aide d'outils no-code et d'agents IA.",
+        "Au programme : prise en main de n8n, Make et Zapier, création d'agents IA via API (OpenAI, REST), mise en place de scénarios d'orchestration complets.",
+        "Méthode : atelier pratique où chaque participant construit ses propres automatisations."
       ]
     },
     {
@@ -230,7 +252,6 @@
       "tags": ["Développement web", "Analytics", "E-commerce"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objectif : améliorer les performances de conversion d'une plateforme e-commerce.",
         "Travail : développement de nouvelles fonctionnalités web et analyse des données utilisateurs pour identifier les axes d'optimisation.",
@@ -245,7 +266,6 @@
       "tags": ["Python", "SQL", "Bash", "Automatisation"],
       "link": "",
       "demo": "",
-      "confidential": true,
       "detail": [
         "Objectif : rendre le système d'information interne plus fiable et plus efficace au quotidien.",
         "Mon rôle : développement d'outils et scripts, automatisation de tâches bureautiques et web, correction de données et documentation des procédures.",

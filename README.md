@@ -14,7 +14,7 @@ Page de CV moderne et responsive, 100 % statique (HTML / CSS / JavaScript), **bi
 - 🎨 Thème sombre / clair (préférence mémorisée)
 - 📄 Export PDF 1 page via la feuille de style d'impression (`Ctrl+P` sur PC, `Imprimer` sur mobile)
 - 🔍 Filtres de projets par catégorie
-- 🔒 Missions clients anonymisées, distinguées visuellement des projets publics
+- 🔒 Missions clients anonymisées, distinguées des projets publics par leur catégorie
 - ➕ Détails dépliants des projets, formations professionnelles et centres d'intérêt
 - ✉️ Formulaire de contact (FormSubmit.co → email)
 - ♿ Accessible et responsive (burger menu sur mobile)
@@ -48,10 +48,9 @@ Page de CV moderne et responsive, 100 % statique (HTML / CSS / JavaScript), **bi
    - `skills[].items[].level` → pourcentage **de 0 à 100**, jamais affiché à l'écran. Il pilote la largeur du remplissage de la pastille (`.sk`) et sa couleur via `SKILL_BANDS` (`js/app.js`) : `haut` ≥ 67 = bleu, `moyen` ≥ 34 = orange, `bas` = rouge. Ajuster un seuil ou une couleur se fait dans `css/styles.css` (`.sk-fill.haut` / `.moyen` / `.bas`)
 
    - `projects[].status` → mention affichée en badge sur la carte projet (écran) et en italique dans l'aperçu imprimable, pour signaler honnêtement un projet non achevé. Absent = projet terminé
-   - `projects[].confidential` → `true` ajoute le badge **Confidentiel** et identifie une mission client anonymisée. À réserver aux missions non diffusables : ne jamais nommer le client ni le secteur
    - `projects[].detail` → tableau de paragraphes affiché dans le `<details>` repliable
 
-> **Projets publics vs missions clients** : les projets open source ont un `link` GitHub et un `status` de travail en cours. Les missions clients portent `confidential: true`, n'ont pas de lien et indiquent explicitement que le détail est disponible en entretien. C'est ce qui permet d'être transparent sur le volume d'expériences sans rien diffuser.
+> **Projets publics vs missions clients** : les projets open source portent un `link` GitHub et un `status` de travail en cours. Les missions clients n'ont pas de lien et indiquent explicitement que le détail est disponible en entretien. C'est ce qui permet d'être transparent sur le volume d'expériences sans rien diffuser — sans nommer ni le client ni le secteur.
 
    - `profile.roles` → titre affiché en rotation dans le hero
    - `profile.mobility` → ligne « lieu · mobilité » sous la photo + mention dans « Qui suis-je ? » (masquée si vide)
